@@ -1,0 +1,2156 @@
+{
+  "direct": {
+    "d1_flow_generated": {
+      "family": "direct",
+      "ablation": "d1_flow_generated",
+      "text_field": "caption",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "params": 1472108,
+      "train": {
+        "ade_m": {
+          "mean": 0.5952,
+          "std": 0.0794,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.2778,
+          "std": 0.1768,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2148,
+          "std": 0.0309,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3514,
+          "std": 0.0444,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5952,
+          "std": 0.0794,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3871,
+          "std": 0.0514,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2667,
+          "std": 0.0365,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5897,
+          "std": 0.0717,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.2778,
+          "std": 0.1768,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.7114,
+          "std": 0.0944,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.4828,
+          "std": 0.0718,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9676,
+          "std": 0.0081,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9986,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9536,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": 0.3102,
+          "std": 0.1792,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0951,
+          "std": 0.087,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.593,
+          "std": 0.1078,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.6801,
+          "std": 0.1004,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.8374,
+          "std": 0.0397,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.2223
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.7542,
+          "std": 0.0184,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.5857,
+          "std": 0.03,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.261,
+          "std": 0.0227,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.4537,
+          "std": 0.0195,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.7542,
+          "std": 0.0184,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.4896,
+          "std": 0.0189,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.3332,
+          "std": 0.025,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.7769,
+          "std": 0.0208,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.5857,
+          "std": 0.03,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.8986,
+          "std": 0.0203,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.6284,
+          "std": 0.0142,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9574,
+          "std": 0.0021,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9572,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": 0.0032,
+          "std": 0.0516,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0058,
+          "std": 0.0042,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.4661,
+          "std": 0.0487,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.5816,
+          "std": 0.0608,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.773,
+          "std": 0.0105,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.1528
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.7197,
+          "std": 0.0345,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.5073,
+          "std": 0.0489,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2508,
+          "std": 0.029,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.4341,
+          "std": 0.0303,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.7197,
+          "std": 0.0345,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.4682,
+          "std": 0.0311,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.3248,
+          "std": 0.0342,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.7432,
+          "std": 0.0359,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.5073,
+          "std": 0.0489,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.8584,
+          "std": 0.0392,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.5896,
+          "std": 0.0246,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9565,
+          "std": 0.0018,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9551,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": 0.0329,
+          "std": 0.0413,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.004,
+          "std": 0.0033,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.52,
+          "std": 0.0224,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.626,
+          "std": 0.0315,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.8053,
+          "std": 0.0204,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.264
+      }
+    },
+    "d2_gt_caption": {
+      "family": "direct",
+      "ablation": "d2_gt_caption",
+      "text_field": "caption",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "params": 1472108,
+      "train": {
+        "ade_m": {
+          "mean": 0.4115,
+          "std": 0.0276,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 0.8552,
+          "std": 0.0621,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1653,
+          "std": 0.009,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2548,
+          "std": 0.015,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.4115,
+          "std": 0.0276,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.2772,
+          "std": 0.0169,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2045,
+          "std": 0.0108,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.4052,
+          "std": 0.0267,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 0.8552,
+          "std": 0.0621,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.4883,
+          "std": 0.0327,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9755,
+          "std": 0.0037,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9986,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9536,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": 0.4876,
+          "std": 0.0819,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.1708,
+          "std": 0.0572,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.7071,
+          "std": 0.0574,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.7859,
+          "std": 0.0519,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.8774,
+          "std": 0.0191,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.2223
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.6056,
+          "std": 0.0035,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.2499,
+          "std": 0.0142,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2263,
+          "std": 0.0034,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.374,
+          "std": 0.0036,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.6056,
+          "std": 0.0035,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.402,
+          "std": 0.0025,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2886,
+          "std": 0.0047,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.6202,
+          "std": 0.0037,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.2499,
+          "std": 0.0142,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.7195,
+          "std": 0.0053,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9594,
+          "std": 0.001,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9572,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": 0.0507,
+          "std": 0.0234,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0045,
+          "std": 0.0024,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.5235,
+          "std": 0.0161,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.6338,
+          "std": 0.0191,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.8014,
+          "std": 0.0037,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.1528
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.5704,
+          "std": 0.0147,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.1866,
+          "std": 0.0268,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2055,
+          "std": 0.0084,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3475,
+          "std": 0.0107,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5704,
+          "std": 0.0147,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3745,
+          "std": 0.0105,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2638,
+          "std": 0.0122,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.58,
+          "std": 0.0158,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.1866,
+          "std": 0.0268,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6768,
+          "std": 0.0155,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.958,
+          "std": 0.0004,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9551,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": 0.0659,
+          "std": 0.0099,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.002,
+          "std": 0.0016,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.5687,
+          "std": 0.0118,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.6807,
+          "std": 0.0245,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.8113,
+          "std": 0.0077,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.264
+      }
+    },
+    "d3_no_text": {
+      "family": "direct",
+      "ablation": "d3_no_text",
+      "text_field": null,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "params": 275532,
+      "train": {
+        "ade_m": {
+          "mean": 0.5667,
+          "std": 0.0231,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.2571,
+          "std": 0.033,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2114,
+          "std": 0.0148,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3251,
+          "std": 0.0199,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5667,
+          "std": 0.0231,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3677,
+          "std": 0.0192,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2521,
+          "std": 0.0187,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5336,
+          "std": 0.0259,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.2571,
+          "std": 0.033,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.681,
+          "std": 0.0256,
+          "n": 3
+        }
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.7387,
+          "std": 0.0204,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.5533,
+          "std": 0.0386,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2675,
+          "std": 0.0057,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.4478,
+          "std": 0.0132,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.7387,
+          "std": 0.0204,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.4846,
+          "std": 0.0131,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.3365,
+          "std": 0.0074,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.7518,
+          "std": 0.0264,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.5533,
+          "std": 0.0386,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.8805,
+          "std": 0.0239,
+          "n": 3
+        }
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.6981,
+          "std": 0.0135,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.4677,
+          "std": 0.0179,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2508,
+          "std": 0.0085,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.4202,
+          "std": 0.012,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.6981,
+          "std": 0.0135,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.4564,
+          "std": 0.011,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.3181,
+          "std": 0.0107,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.711,
+          "std": 0.0181,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.4677,
+          "std": 0.0179,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.8323,
+          "std": 0.0149,
+          "n": 3
+        }
+      }
+    },
+    "d4_flow_state_only": {
+      "family": "direct",
+      "ablation": "d4_flow_state_only",
+      "text_field": "caption",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "n_seeds": 3,
+      "params": 1439340,
+      "train": {
+        "ade_m": {
+          "mean": 0.5615,
+          "std": 0.0414,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.2373,
+          "std": 0.0892,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1978,
+          "std": 0.014,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3218,
+          "std": 0.0238,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5615,
+          "std": 0.0414,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3604,
+          "std": 0.0263,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2414,
+          "std": 0.0165,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5432,
+          "std": 0.0416,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.2373,
+          "std": 0.0892,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6739,
+          "std": 0.0486,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.4404,
+          "std": 0.0361,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9435,
+          "std": 0.0005,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9986,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9536,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.2238,
+          "std": 0.011,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0029,
+          "std": 0.0003,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.494,
+          "std": 0.0089,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.6079,
+          "std": 0.0182,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.776,
+          "std": 0.0056,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.2223
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.7842,
+          "std": 0.0123,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.6204,
+          "std": 0.0185,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2769,
+          "std": 0.0044,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.4802,
+          "std": 0.0098,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.7842,
+          "std": 0.0123,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.5138,
+          "std": 0.0087,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.3572,
+          "std": 0.0078,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.8182,
+          "std": 0.0167,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.6204,
+          "std": 0.0185,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.932,
+          "std": 0.014,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.6555,
+          "std": 0.0138,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9464,
+          "std": 0.0013,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9572,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.2622,
+          "std": 0.0314,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0013,
+          "std": 0.0009,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.4681,
+          "std": 0.0248,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.6009,
+          "std": 0.038,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.7505,
+          "std": 0.0057,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.1528
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.7165,
+          "std": 0.0017,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.5087,
+          "std": 0.0094,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.2461,
+          "std": 0.0039,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.429,
+          "std": 0.0024,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.7165,
+          "std": 0.0017,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.4639,
+          "std": 0.0026,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.3162,
+          "std": 0.0049,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.7384,
+          "std": 0.0023,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.5087,
+          "std": 0.0094,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.8544,
+          "std": 0.0016,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.5844,
+          "std": 0.0064,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9461,
+          "std": 0.0021,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9551,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.2071,
+          "std": 0.0482,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.004,
+          "std": 0.0016,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.5293,
+          "std": 0.0189,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.6507,
+          "std": 0.0105,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.7853,
+          "std": 0.0164,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.264
+      }
+    }
+  },
+  "wm": {
+    "a_world_model_only": {
+      "family": "wm",
+      "ablation": "a_world_model_only",
+      "text_field": null,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "prior": "ctra",
+      "residual": true,
+      "n_seeds": 3,
+      "params": 188633,
+      "train": {
+        "ade_m": {
+          "mean": 0.4838,
+          "std": 0.0017,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.1327,
+          "std": 0.0032,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1265,
+          "std": 0.0006,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.253,
+          "std": 0.0011,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.4838,
+          "std": 0.0017,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.2878,
+          "std": 0.0011,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1668,
+          "std": 0.0009,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.4758,
+          "std": 0.0019,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.1327,
+          "std": 0.0032,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.5918,
+          "std": 0.002,
+          "n": 3
+        },
+        "residual_mean_abs_m": {
+          "mean": 0.0971,
+          "std": 0.0011,
+          "n": 3
+        }
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.4839,
+          "std": 0.0015,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.1065,
+          "std": 0.0036,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1379,
+          "std": 0.0002,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2635,
+          "std": 0.0006,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.4839,
+          "std": 0.0015,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.2951,
+          "std": 0.0007,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1796,
+          "std": 0.0004,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.48,
+          "std": 0.0018,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.1065,
+          "std": 0.0036,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.5887,
+          "std": 0.0018,
+          "n": 3
+        },
+        "residual_mean_abs_m": {
+          "mean": 0.0991,
+          "std": 0.0025,
+          "n": 3
+        }
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.4407,
+          "std": 0.0011,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.0362,
+          "std": 0.0015,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1113,
+          "std": 0.0005,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.229,
+          "std": 0.001,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.4407,
+          "std": 0.0011,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.2603,
+          "std": 0.0009,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1497,
+          "std": 0.0011,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.4352,
+          "std": 0.0013,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.0362,
+          "std": 0.0015,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.5404,
+          "std": 0.0013,
+          "n": 3
+        },
+        "residual_mean_abs_m": {
+          "mean": 0.0875,
+          "std": 0.0019,
+          "n": 3
+        }
+      }
+    },
+    "b_vla_diffusion": {
+      "family": "wm",
+      "ablation": "b_vla_diffusion",
+      "text_field": "caption",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "prior": "ctra",
+      "residual": true,
+      "n_seeds": 3,
+      "params": 1532793,
+      "train": {
+        "ade_m": {
+          "mean": 0.5373,
+          "std": 0.016,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.251,
+          "std": 0.044,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.139,
+          "std": 0.0011,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2827,
+          "std": 0.006,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5373,
+          "std": 0.016,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3197,
+          "std": 0.0077,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1847,
+          "std": 0.0023,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5333,
+          "std": 0.0155,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.251,
+          "std": 0.044,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6563,
+          "std": 0.0206,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.464,
+          "std": 0.0173,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9393,
+          "std": 0.0019,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9986,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9536,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.3182,
+          "std": 0.0427,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.004,
+          "std": 0.0024,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.2949,
+          "std": 0.0157,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.3929,
+          "std": 0.0147,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.6658,
+          "std": 0.0281,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.2223,
+        "residual_mean_abs_m": {
+          "mean": 0.0363,
+          "std": 0.0051,
+          "n": 3
+        }
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.6107,
+          "std": 0.0039,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.3932,
+          "std": 0.0079,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1619,
+          "std": 0.0009,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3301,
+          "std": 0.0022,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.6107,
+          "std": 0.0039,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3676,
+          "std": 0.0023,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2153,
+          "std": 0.0014,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.6164,
+          "std": 0.0042,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.3932,
+          "std": 0.0079,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.7416,
+          "std": 0.0045,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.5285,
+          "std": 0.0059,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9392,
+          "std": 0.0023,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9572,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.436,
+          "std": 0.0542,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0006,
+          "std": 0.0009,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.2553,
+          "std": 0.026,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.3675,
+          "std": 0.0421,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.6473,
+          "std": 0.0243,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.1528,
+        "residual_mean_abs_m": {
+          "mean": 0.0361,
+          "std": 0.0056,
+          "n": 3
+        }
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.5573,
+          "std": 0.0067,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.2889,
+          "std": 0.0191,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.138,
+          "std": 0.002,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2935,
+          "std": 0.0029,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5573,
+          "std": 0.0067,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3296,
+          "std": 0.0039,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1885,
+          "std": 0.0028,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5639,
+          "std": 0.0055,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.2889,
+          "std": 0.0191,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6804,
+          "std": 0.009,
+          "n": 3
+        },
+        "min_ade_k5": {
+          "mean": 0.4745,
+          "std": 0.005,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9389,
+          "std": 0.0019,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9551,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.3727,
+          "std": 0.043,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0013,
+          "std": 0.0019,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.3053,
+          "std": 0.009,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.4047,
+          "std": 0.0062,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.6967,
+          "std": 0.018,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.264,
+        "residual_mean_abs_m": {
+          "mean": 0.0354,
+          "std": 0.0051,
+          "n": 3
+        }
+      }
+    },
+    "c_vla_no_text": {
+      "family": "wm",
+      "ablation": "c_vla_no_text",
+      "text_field": null,
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "prior": "ctra",
+      "residual": true,
+      "n_seeds": 3,
+      "params": 328025,
+      "train": {
+        "ade_m": {
+          "mean": 0.5712,
+          "std": 0.0153,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.3412,
+          "std": 0.0402,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1446,
+          "std": 0.0018,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2973,
+          "std": 0.0066,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5712,
+          "std": 0.0153,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3377,
+          "std": 0.0078,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.192,
+          "std": 0.003,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5648,
+          "std": 0.0153,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.3412,
+          "std": 0.0402,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6993,
+          "std": 0.0194,
+          "n": 3
+        },
+        "residual_mean_abs_m": {
+          "mean": 0.0064,
+          "std": 0.0023,
+          "n": 3
+        }
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.6022,
+          "std": 0.0043,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.3727,
+          "std": 0.0137,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.164,
+          "std": 0.0008,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3265,
+          "std": 0.0014,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.6022,
+          "std": 0.0043,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3643,
+          "std": 0.0016,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2162,
+          "std": 0.0009,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.6037,
+          "std": 0.0048,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.3727,
+          "std": 0.0137,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.7309,
+          "std": 0.0058,
+          "n": 3
+        },
+        "residual_mean_abs_m": {
+          "mean": 0.0062,
+          "std": 0.0023,
+          "n": 3
+        }
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.5415,
+          "std": 0.0032,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.2549,
+          "std": 0.009,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1369,
+          "std": 0.002,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2856,
+          "std": 0.002,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5415,
+          "std": 0.0032,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3213,
+          "std": 0.0021,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1843,
+          "std": 0.0025,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5448,
+          "std": 0.0025,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.2549,
+          "std": 0.009,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6613,
+          "std": 0.004,
+          "n": 3
+        },
+        "residual_mean_abs_m": {
+          "mean": 0.0063,
+          "std": 0.0022,
+          "n": 3
+        }
+      }
+    },
+    "d_vla_gt_caption": {
+      "family": "wm",
+      "ablation": "d_vla_gt_caption",
+      "text_field": "caption",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "prior": "ctra",
+      "residual": true,
+      "n_seeds": 3,
+      "params": 1532793,
+      "train": {
+        "ade_m": {
+          "mean": 0.3634,
+          "std": 0.0408,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 0.7948,
+          "std": 0.1105,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1282,
+          "std": 0.0026,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2138,
+          "std": 0.0152,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.3634,
+          "std": 0.0408,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.2352,
+          "std": 0.0195,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1643,
+          "std": 0.0049,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.356,
+          "std": 0.0395,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 0.7948,
+          "std": 0.1105,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.4384,
+          "std": 0.0516,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9514,
+          "std": 0.0028,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9986,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9536,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.0491,
+          "std": 0.0635,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0107,
+          "std": 0.0029,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.3952,
+          "std": 0.028,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.4847,
+          "std": 0.0245,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.7611,
+          "std": 0.0176,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.2223,
+        "residual_mean_abs_m": {
+          "mean": 0.1166,
+          "std": 0.0138,
+          "n": 3
+        }
+      },
+      "val": {
+        "ade_m": {
+          "mean": 0.5359,
+          "std": 0.006,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.196,
+          "std": 0.0143,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1578,
+          "std": 0.0021,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.3002,
+          "std": 0.0031,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.5359,
+          "std": 0.006,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.3313,
+          "std": 0.0037,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.2071,
+          "std": 0.0031,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.5402,
+          "std": 0.004,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.196,
+          "std": 0.0143,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6478,
+          "std": 0.0071,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9491,
+          "std": 0.0025,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9572,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.1958,
+          "std": 0.0604,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.0045,
+          "std": 0.0024,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.343,
+          "std": 0.04,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.45,
+          "std": 0.049,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.726,
+          "std": 0.0132,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.1528,
+        "residual_mean_abs_m": {
+          "mean": 0.1195,
+          "std": 0.0116,
+          "n": 3
+        }
+      },
+      "test": {
+        "ade_m": {
+          "mean": 0.4932,
+          "std": 0.0103,
+          "n": 3
+        },
+        "fde_m": {
+          "mean": 1.1369,
+          "std": 0.0307,
+          "n": 3
+        },
+        "l2_stp3_1s": {
+          "mean": 0.1319,
+          "std": 0.0011,
+          "n": 3
+        },
+        "l2_stp3_2s": {
+          "mean": 0.2645,
+          "std": 0.0033,
+          "n": 3
+        },
+        "l2_stp3_3s": {
+          "mean": 0.4932,
+          "std": 0.0103,
+          "n": 3
+        },
+        "l2_stp3_avg": {
+          "mean": 0.2965,
+          "std": 0.0048,
+          "n": 3
+        },
+        "l2_uniad_1s": {
+          "mean": 0.1779,
+          "std": 0.0008,
+          "n": 3
+        },
+        "l2_uniad_2s": {
+          "mean": 0.4918,
+          "std": 0.0089,
+          "n": 3
+        },
+        "l2_uniad_3s": {
+          "mean": 1.1369,
+          "std": 0.0307,
+          "n": 3
+        },
+        "l2_uniad_avg": {
+          "mean": 0.6022,
+          "std": 0.0134,
+          "n": 3
+        },
+        "text_cosine_model": {
+          "mean": 0.9485,
+          "std": 0.0027,
+          "n": 3
+        },
+        "text_cosine_pca_ceiling": {
+          "mean": 0.9987,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_cosine_mean_baseline": {
+          "mean": 0.9551,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_scaled_score": {
+          "mean": -0.1526,
+          "std": 0.0624,
+          "n": 3
+        },
+        "text_retrieval_accuracy": {
+          "mean": 0.002,
+          "std": 0.0,
+          "n": 3
+        },
+        "text_behavior_accuracy": {
+          "mean": 0.3993,
+          "std": 0.0297,
+          "n": 3
+        },
+        "text_behavior_speed_accuracy": {
+          "mean": 0.4947,
+          "std": 0.0264,
+          "n": 3
+        },
+        "text_behavior_steer_accuracy": {
+          "mean": 0.77,
+          "std": 0.0147,
+          "n": 3
+        },
+        "behavior_majority_accuracy": 0.264,
+        "residual_mean_abs_m": {
+          "mean": 0.1083,
+          "std": 0.0093,
+          "n": 3
+        }
+      }
+    }
+  },
+  "baselines": {
+    "cv": {
+      "params": 0,
+      "ade_m": 0.8971,
+      "fde_m": 1.9547,
+      "l2": {
+        "stp3": {
+          "1s": 0.2199,
+          "2s": 0.5017,
+          "3s": 0.8971,
+          "avg": 0.5396
+        },
+        "uniad": {
+          "1s": 0.3161,
+          "2s": 0.9707,
+          "3s": 1.9547,
+          "avg": 1.0805
+        }
+      }
+    },
+    "ca": {
+      "params": 0,
+      "ade_m": 0.7874,
+      "fde_m": 1.7834,
+      "l2": {
+        "stp3": {
+          "1s": 0.1965,
+          "2s": 0.424,
+          "3s": 0.7874,
+          "avg": 0.4693
+        },
+        "uniad": {
+          "1s": 0.2737,
+          "2s": 0.8135,
+          "3s": 1.7834,
+          "avg": 0.9569
+        }
+      }
+    },
+    "ctrv": {
+      "params": 0,
+      "ade_m": 0.7975,
+      "fde_m": 1.747,
+      "l2": {
+        "stp3": {
+          "1s": 0.2008,
+          "2s": 0.4452,
+          "3s": 0.7975,
+          "avg": 0.4812
+        },
+        "uniad": {
+          "1s": 0.2852,
+          "2s": 0.8547,
+          "3s": 1.747,
+          "avg": 0.9623
+        }
+      }
+    },
+    "ctra": {
+      "params": 0,
+      "ade_m": 0.6986,
+      "fde_m": 1.62,
+      "l2": {
+        "stp3": {
+          "1s": 0.1768,
+          "2s": 0.3682,
+          "3s": 0.6986,
+          "avg": 0.4145
+        },
+        "uniad": {
+          "1s": 0.2412,
+          "2s": 0.7011,
+          "3s": 1.62,
+          "avg": 0.8541
+        }
+      }
+    }
+  }
+}

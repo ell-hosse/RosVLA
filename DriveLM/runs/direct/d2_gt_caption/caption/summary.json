@@ -1,0 +1,291 @@
+{
+  "family": "direct",
+  "ablation": "d2_gt_caption",
+  "text_field": "caption",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "n_seeds": 3,
+  "params": 1472108,
+  "train": {
+    "ade_m": {
+      "mean": 0.4115,
+      "std": 0.0276,
+      "n": 3
+    },
+    "fde_m": {
+      "mean": 0.8552,
+      "std": 0.0621,
+      "n": 3
+    },
+    "l2_stp3_1s": {
+      "mean": 0.1653,
+      "std": 0.009,
+      "n": 3
+    },
+    "l2_stp3_2s": {
+      "mean": 0.2548,
+      "std": 0.015,
+      "n": 3
+    },
+    "l2_stp3_3s": {
+      "mean": 0.4115,
+      "std": 0.0276,
+      "n": 3
+    },
+    "l2_stp3_avg": {
+      "mean": 0.2772,
+      "std": 0.0169,
+      "n": 3
+    },
+    "l2_uniad_1s": {
+      "mean": 0.2045,
+      "std": 0.0108,
+      "n": 3
+    },
+    "l2_uniad_2s": {
+      "mean": 0.4052,
+      "std": 0.0267,
+      "n": 3
+    },
+    "l2_uniad_3s": {
+      "mean": 0.8552,
+      "std": 0.0621,
+      "n": 3
+    },
+    "l2_uniad_avg": {
+      "mean": 0.4883,
+      "std": 0.0327,
+      "n": 3
+    },
+    "text_cosine_model": {
+      "mean": 0.9755,
+      "std": 0.0037,
+      "n": 3
+    },
+    "text_cosine_pca_ceiling": {
+      "mean": 0.9986,
+      "std": 0.0,
+      "n": 3
+    },
+    "text_cosine_mean_baseline": {
+      "mean": 0.9536,
+      "std": 0.0,
+      "n": 3
+    },
+    "text_scaled_score": {
+      "mean": 0.4876,
+      "std": 0.0819,
+      "n": 3
+    },
+    "text_retrieval_accuracy": {
+      "mean": 0.1708,
+      "std": 0.0572,
+      "n": 3
+    },
+    "text_behavior_accuracy": {
+      "mean": 0.7071,
+      "std": 0.0574,
+      "n": 3
+    },
+    "text_behavior_speed_accuracy": {
+      "mean": 0.7859,
+      "std": 0.0519,
+      "n": 3
+    },
+    "text_behavior_steer_accuracy": {
+      "mean": 0.8774,
+      "std": 0.0191,
+      "n": 3
+    },
+    "behavior_majority_accuracy": 0.2223
+  },
+  "val": {
+    "ade_m": {
+      "mean": 0.6056,
+      "std": 0.0035,
+      "n": 3
+    },
+    "fde_m": {
+      "mean": 1.2499,
+      "std": 0.0142,
+      "n": 3
+    },
+    "l2_stp3_1s": {
+      "mean": 0.2263,
+      "std": 0.0034,
+      "n": 3
+    },
+    "l2_stp3_2s": {
+      "mean": 0.374,
+      "std": 0.0036,
+      "n": 3
+    },
+    "l2_stp3_3s": {
+      "mean": 0.6056,
+      "std": 0.0035,
+      "n": 3
+    },
+    "l2_stp3_avg": {
+      "mean": 0.402,
+      "std": 0.0025,
+      "n": 3
+    },
+    "l2_uniad_1s": {
+      "mean": 0.2886,
+      "std": 0.0047,
+      "n": 3
+    },
+    "l2_uniad_2s": {
+      "mean": 0.6202,
+      "std": 0.0037,
+      "n": 3
+    },
+    "l2_uniad_3s": {
+      "mean": 1.2499,
+      "std": 0.0142,
+      "n": 3
+    },
+    "l2_uniad_avg": {
+      "mean": 0.7195,
+      "std": 0.0053,
+      "n": 3
+    },
+    "text_cosine_model": {
+      "mean": 0.9594,
+      "std": 0.001,
+      "n": 3
+    },
+    "text_cosine_pca_ceiling": {
+      "mean": 0.9987,
+      "std": 0.0,
+      "n": 3
+    },
+    "text_cosine_mean_baseline": {
+      "mean": 0.9572,
+      "std": 0.0,
+      "n": 3
+    },
+    "text_scaled_score": {
+      "mean": 0.0507,
+      "std": 0.0234,
+      "n": 3
+    },
+    "text_retrieval_accuracy": {
+      "mean": 0.0045,
+      "std": 0.0024,
+      "n": 3
+    },
+    "text_behavior_accuracy": {
+      "mean": 0.5235,
+      "std": 0.0161,
+      "n": 3
+    },
+    "text_behavior_speed_accuracy": {
+      "mean": 0.6338,
+      "std": 0.0191,
+      "n": 3
+    },
+    "text_behavior_steer_accuracy": {
+      "mean": 0.8014,
+      "std": 0.0037,
+      "n": 3
+    },
+    "behavior_majority_accuracy": 0.1528
+  },
+  "test": {
+    "ade_m": {
+      "mean": 0.5704,
+      "std": 0.0147,
+      "n": 3
+    },
+    "fde_m": {
+      "mean": 1.1866,
+      "std": 0.0268,
+      "n": 3
+    },
+    "l2_stp3_1s": {
+      "mean": 0.2055,
+      "std": 0.0084,
+      "n": 3
+    },
+    "l2_stp3_2s": {
+      "mean": 0.3475,
+      "std": 0.0107,
+      "n": 3
+    },
+    "l2_stp3_3s": {
+      "mean": 0.5704,
+      "std": 0.0147,
+      "n": 3
+    },
+    "l2_stp3_avg": {
+      "mean": 0.3745,
+      "std": 0.0105,
+      "n": 3
+    },
+    "l2_uniad_1s": {
+      "mean": 0.2638,
+      "std": 0.0122,
+      "n": 3
+    },
+    "l2_uniad_2s": {
+      "mean": 0.58,
+      "std": 0.0158,
+      "n": 3
+    },
+    "l2_uniad_3s": {
+      "mean": 1.1866,
+      "std": 0.0268,
+      "n": 3
+    },
+    "l2_uniad_avg": {
+      "mean": 0.6768,
+      "std": 0.0155,
+      "n": 3
+    },
+    "text_cosine_model": {
+      "mean": 0.958,
+      "std": 0.0004,
+      "n": 3
+    },
+    "text_cosine_pca_ceiling": {
+      "mean": 0.9987,
+      "std": 0.0,
+      "n": 3
+    },
+    "text_cosine_mean_baseline": {
+      "mean": 0.9551,
+      "std": 0.0,
+      "n": 3
+    },
+    "text_scaled_score": {
+      "mean": 0.0659,
+      "std": 0.0099,
+      "n": 3
+    },
+    "text_retrieval_accuracy": {
+      "mean": 0.002,
+      "std": 0.0016,
+      "n": 3
+    },
+    "text_behavior_accuracy": {
+      "mean": 0.5687,
+      "std": 0.0118,
+      "n": 3
+    },
+    "text_behavior_speed_accuracy": {
+      "mean": 0.6807,
+      "std": 0.0245,
+      "n": 3
+    },
+    "text_behavior_steer_accuracy": {
+      "mean": 0.8113,
+      "std": 0.0077,
+      "n": 3
+    },
+    "behavior_majority_accuracy": 0.264
+  }
+}

@@ -1,2 +1,33 @@
-.idea
-/dataset
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# dataset (distributed separately, see README)
+/dataset/*
+!/dataset/tools/
+
+# model checkpoints and feature caches
+*.pt
+*.pth
+*.ckpt
+cache/
+*.partial.npz
+CoVLA/trajectory_predictor/*_cache.npz
+RosVLA/velocity_head/paper_figures/_*.npz
+
+# visualisation output
+*.mp4
+*.gif
+calib_grid/
+video/
+viz_output/
+
+# local files
+_to_delete/
+*.tgz
+*.zip

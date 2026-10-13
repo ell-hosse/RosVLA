@@ -1,0 +1,1217 @@
+{
+  "modes": [
+    "shared-joint",
+    "shared-staged",
+    "split-joint",
+    "split-staged",
+    "shared-pcgrad"
+  ],
+  "table": {
+    "ade": {
+      "shared-joint": {
+        "mean": 0.1579,
+        "std": 0.0559
+      },
+      "shared-staged": {
+        "mean": 0.1661,
+        "std": 0.0568
+      },
+      "split-joint": {
+        "mean": 0.1605,
+        "std": 0.0597
+      },
+      "split-staged": {
+        "mean": 0.1603,
+        "std": 0.058
+      },
+      "shared-pcgrad": {
+        "mean": 0.158,
+        "std": 0.0563
+      }
+    },
+    "fde": {
+      "shared-joint": {
+        "mean": 0.2991,
+        "std": 0.1152
+      },
+      "shared-staged": {
+        "mean": 0.312,
+        "std": 0.1093
+      },
+      "split-joint": {
+        "mean": 0.3057,
+        "std": 0.1201
+      },
+      "split-staged": {
+        "mean": 0.3054,
+        "std": 0.1153
+      },
+      "shared-pcgrad": {
+        "mean": 0.2994,
+        "std": 0.1157
+      }
+    },
+    "min_ade_k5": {
+      "shared-joint": {
+        "mean": 0.156,
+        "std": 0.0554
+      },
+      "shared-staged": {
+        "mean": 0.1638,
+        "std": 0.0561
+      },
+      "split-joint": {
+        "mean": 0.1589,
+        "std": 0.0589
+      },
+      "split-staged": {
+        "mean": 0.1555,
+        "std": 0.0564
+      },
+      "shared-pcgrad": {
+        "mean": 0.1561,
+        "std": 0.0558
+      }
+    },
+    "velocity.v.mae": {
+      "shared-joint": {
+        "mean": 0.1248,
+        "std": 0.0452
+      },
+      "shared-staged": {
+        "mean": 0.1362,
+        "std": 0.0402
+      },
+      "split-joint": {
+        "mean": 0.1249,
+        "std": 0.0469
+      },
+      "split-staged": {
+        "mean": 0.1261,
+        "std": 0.0458
+      },
+      "shared-pcgrad": {
+        "mean": 0.1248,
+        "std": 0.0454
+      }
+    },
+    "velocity.w.mae": {
+      "shared-joint": {
+        "mean": 0.1579,
+        "std": 0.0669
+      },
+      "shared-staged": {
+        "mean": 0.1764,
+        "std": 0.0703
+      },
+      "split-joint": {
+        "mean": 0.1566,
+        "std": 0.0702
+      },
+      "split-staged": {
+        "mean": 0.1628,
+        "std": 0.0722
+      },
+      "shared-pcgrad": {
+        "mean": 0.1578,
+        "std": 0.0672
+      }
+    },
+    "accuracy": {
+      "shared-joint": {
+        "mean": 0.7631,
+        "std": 0.1234
+      },
+      "shared-staged": {
+        "mean": 0.7669,
+        "std": 0.1211
+      },
+      "split-joint": {
+        "mean": 0.775,
+        "std": 0.1167
+      },
+      "split-staged": {
+        "mean": 0.7697,
+        "std": 0.1171
+      },
+      "shared-pcgrad": {
+        "mean": 0.775,
+        "std": 0.1167
+      }
+    },
+    "text_cosine_model": {
+      "shared-joint": {
+        "mean": 0.9486,
+        "std": 0.0359
+      },
+      "shared-staged": {
+        "mean": 0.9478,
+        "std": 0.037
+      },
+      "split-joint": {
+        "mean": 0.949,
+        "std": 0.0362
+      },
+      "split-staged": {
+        "mean": 0.947,
+        "std": 0.0353
+      },
+      "shared-pcgrad": {
+        "mean": 0.9491,
+        "std": 0.036
+      }
+    },
+    "text_retrieval_accuracy": {
+      "shared-joint": {
+        "mean": 0.7604,
+        "std": 0.1271
+      },
+      "shared-staged": {
+        "mean": 0.7697,
+        "std": 0.1171
+      },
+      "split-joint": {
+        "mean": 0.7722,
+        "std": 0.1208
+      },
+      "split-staged": {
+        "mean": 0.7652,
+        "std": 0.1178
+      },
+      "shared-pcgrad": {
+        "mean": 0.768,
+        "std": 0.1251
+      }
+    },
+    "grad_cosine_mean_over_training": {
+      "shared-joint": {
+        "mean": 0.0383,
+        "std": 0.009
+      },
+      "shared-pcgrad": {
+        "mean": 0.0387,
+        "std": 0.009
+      }
+    }
+  },
+  "per_mode": {
+    "shared-joint": {
+      "accuracy": {
+        "mean": 0.7631,
+        "std": 0.1234
+      },
+      "action.accuracy": {
+        "mean": 0.7631,
+        "std": 0.1234
+      },
+      "action.per_class_recall.FORWARD.recall": {
+        "mean": 0.4645,
+        "std": 0.366
+      },
+      "action.per_class_recall.FORWARD.support": {
+        "mean": 4.5,
+        "std": 3.0414
+      },
+      "action.per_class_recall.RIGHT_TURN.recall": {
+        "mean": 0.913,
+        "std": 0.0988
+      },
+      "action.per_class_recall.RIGHT_TURN.support": {
+        "mean": 14.5,
+        "std": 4.9649
+      },
+      "ade": {
+        "mean": 0.1579,
+        "std": 0.0559
+      },
+      "ade_hold_last_command": {
+        "mean": 0.1567,
+        "std": 0.0383
+      },
+      "ade_oracle_commands": {
+        "mean": 0.0398,
+        "std": 0.0065
+      },
+      "fde": {
+        "mean": 0.2991,
+        "std": 0.1152
+      },
+      "fde_hold_last_command": {
+        "mean": 0.3347,
+        "std": 0.0871
+      },
+      "fde_oracle_commands": {
+        "mean": 0.0586,
+        "std": 0.0092
+      },
+      "fold": {
+        "mean": 4.5,
+        "std": 2.8723
+      },
+      "frac_conflicting_over_training": {
+        "mean": 0.418,
+        "std": 0.0328
+      },
+      "grad_cosine_first_epoch.frac_conflicting_batches": {
+        "mean": 0.8,
+        "std": 0.4
+      },
+      "grad_cosine_first_epoch.grad_cosine_mean": {
+        "mean": -0.0027,
+        "std": 0.034
+      },
+      "grad_cosine_first_epoch.n_measured": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "grad_cosine_last_epoch.frac_conflicting_batches": {
+        "mean": 0.3,
+        "std": 0.4583
+      },
+      "grad_cosine_last_epoch.grad_cosine_mean": {
+        "mean": 0.0373,
+        "std": 0.0966
+      },
+      "grad_cosine_last_epoch.n_measured": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "grad_cosine_mean_over_training": {
+        "mean": 0.0383,
+        "std": 0.009
+      },
+      "latent_dim": {
+        "mean": 3.8,
+        "std": 0.4
+      },
+      "min_ade_k5": {
+        "mean": 0.156,
+        "std": 0.0554
+      },
+      "min_fde_k5": {
+        "mean": 0.2963,
+        "std": 0.1145
+      },
+      "mode.p_sampled_z": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "n_test": {
+        "mean": 21.1,
+        "std": 8.1541
+      },
+      "n_train": {
+        "mean": 189.9,
+        "std": 8.1541
+      },
+      "pca_explained": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "text_bank_coverage": {
+        "mean": 0.9458,
+        "std": 0.1087
+      },
+      "text_bank_size": {
+        "mean": 4.8,
+        "std": 0.4
+      },
+      "text_cosine_mean_baseline": {
+        "mean": 0.9341,
+        "std": 0.0463
+      },
+      "text_cosine_model": {
+        "mean": 0.9486,
+        "std": 0.0359
+      },
+      "text_cosine_pca_ceiling": {
+        "mean": 0.9882,
+        "std": 0.0347
+      },
+      "text_n_unique_true": {
+        "mean": 2.7,
+        "std": 0.6403
+      },
+      "text_retrieval_accuracy": {
+        "mean": 0.7604,
+        "std": 0.1271
+      },
+      "text_retrieval_accuracy_covered": {
+        "mean": 0.8055,
+        "std": 0.1033
+      },
+      "train_loss.act": {
+        "mean": 0.0001,
+        "std": 0.0
+      },
+      "train_loss.flow": {
+        "mean": 0.0232,
+        "std": 0.0082
+      },
+      "train_loss.v": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_loss.w": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 13.43,
+        "std": 0.7184
+      },
+      "velocity.snapped_exact_match": {
+        "mean": 0.2092,
+        "std": 0.1037
+      },
+      "velocity.snapped_exact_match_step0": {
+        "mean": 0.17,
+        "std": 0.1542
+      },
+      "velocity.snapped_v_mae": {
+        "mean": 0.1098,
+        "std": 0.0543
+      },
+      "velocity.snapped_w_mae": {
+        "mean": 0.1423,
+        "std": 0.0808
+      },
+      "velocity.v.mae": {
+        "mean": 0.1248,
+        "std": 0.0452
+      },
+      "velocity.v.max_abs": {
+        "mean": 0.5346,
+        "std": 0.1517
+      },
+      "velocity.v.r2": {
+        "mean": -0.3127,
+        "std": 0.8101
+      },
+      "velocity.v.rmse": {
+        "mean": 0.1889,
+        "std": 0.0561
+      },
+      "velocity.w.mae": {
+        "mean": 0.1579,
+        "std": 0.0669
+      },
+      "velocity.w.max_abs": {
+        "mean": 0.574,
+        "std": 0.1574
+      },
+      "velocity.w.r2": {
+        "mean": -0.1012,
+        "std": 0.8537
+      },
+      "velocity.w.rmse": {
+        "mean": 0.2254,
+        "std": 0.0828
+      }
+    },
+    "shared-staged": {
+      "accuracy": {
+        "mean": 0.7669,
+        "std": 0.1211
+      },
+      "action.accuracy": {
+        "mean": 0.7669,
+        "std": 0.1211
+      },
+      "action.per_class_recall.FORWARD.recall": {
+        "mean": 0.4702,
+        "std": 0.3929
+      },
+      "action.per_class_recall.FORWARD.support": {
+        "mean": 4.5,
+        "std": 3.0414
+      },
+      "action.per_class_recall.RIGHT_TURN.recall": {
+        "mean": 0.9183,
+        "std": 0.1038
+      },
+      "action.per_class_recall.RIGHT_TURN.support": {
+        "mean": 14.5,
+        "std": 4.9649
+      },
+      "ade": {
+        "mean": 0.1661,
+        "std": 0.0568
+      },
+      "ade_hold_last_command": {
+        "mean": 0.1567,
+        "std": 0.0383
+      },
+      "ade_oracle_commands": {
+        "mean": 0.0398,
+        "std": 0.0065
+      },
+      "epochs_stage_a": {
+        "mean": 120.0,
+        "std": 0.0
+      },
+      "epochs_stage_b": {
+        "mean": 180.0,
+        "std": 0.0
+      },
+      "fde": {
+        "mean": 0.312,
+        "std": 0.1093
+      },
+      "fde_hold_last_command": {
+        "mean": 0.3347,
+        "std": 0.0871
+      },
+      "fde_oracle_commands": {
+        "mean": 0.0586,
+        "std": 0.0092
+      },
+      "fold": {
+        "mean": 4.5,
+        "std": 2.8723
+      },
+      "latent_dim": {
+        "mean": 3.8,
+        "std": 0.4
+      },
+      "min_ade_k5": {
+        "mean": 0.1638,
+        "std": 0.0561
+      },
+      "min_fde_k5": {
+        "mean": 0.3086,
+        "std": 0.1086
+      },
+      "mode.p_sampled_z": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mode.stage_a_frac": {
+        "mean": 0.4,
+        "std": 0.0
+      },
+      "n_test": {
+        "mean": 21.1,
+        "std": 8.1541
+      },
+      "n_train": {
+        "mean": 189.9,
+        "std": 8.1541
+      },
+      "pca_explained": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "stage_a_params": {
+        "mean": 959421.4,
+        "std": 205.2
+      },
+      "stage_b_params": {
+        "mean": 112349.8,
+        "std": 102.4
+      },
+      "text_bank_coverage": {
+        "mean": 0.9458,
+        "std": 0.1087
+      },
+      "text_bank_size": {
+        "mean": 4.8,
+        "std": 0.4
+      },
+      "text_cosine_mean_baseline": {
+        "mean": 0.9341,
+        "std": 0.0463
+      },
+      "text_cosine_model": {
+        "mean": 0.9478,
+        "std": 0.037
+      },
+      "text_cosine_pca_ceiling": {
+        "mean": 0.9882,
+        "std": 0.0347
+      },
+      "text_n_unique_true": {
+        "mean": 2.7,
+        "std": 0.6403
+      },
+      "text_retrieval_accuracy": {
+        "mean": 0.7697,
+        "std": 0.1171
+      },
+      "text_retrieval_accuracy_covered": {
+        "mean": 0.8175,
+        "std": 0.1049
+      },
+      "train_loss.act": {
+        "mean": 0.0016,
+        "std": 0.0026
+      },
+      "train_loss.flow": {
+        "mean": 0.0561,
+        "std": 0.0166
+      },
+      "train_loss.v": {
+        "mean": 0.0111,
+        "std": 0.0021
+      },
+      "train_loss.w": {
+        "mean": 0.007,
+        "std": 0.0013
+      },
+      "train_seconds": {
+        "mean": 8.37,
+        "std": 0.5235
+      },
+      "velocity.snapped_exact_match": {
+        "mean": 0.189,
+        "std": 0.1108
+      },
+      "velocity.snapped_exact_match_step0": {
+        "mean": 0.201,
+        "std": 0.1407
+      },
+      "velocity.snapped_v_mae": {
+        "mean": 0.1129,
+        "std": 0.0502
+      },
+      "velocity.snapped_w_mae": {
+        "mean": 0.1589,
+        "std": 0.0786
+      },
+      "velocity.v.mae": {
+        "mean": 0.1362,
+        "std": 0.0402
+      },
+      "velocity.v.max_abs": {
+        "mean": 0.59,
+        "std": 0.1789
+      },
+      "velocity.v.r2": {
+        "mean": -0.5255,
+        "std": 0.9792
+      },
+      "velocity.v.rmse": {
+        "mean": 0.2025,
+        "std": 0.0553
+      },
+      "velocity.w.mae": {
+        "mean": 0.1764,
+        "std": 0.0703
+      },
+      "velocity.w.max_abs": {
+        "mean": 0.669,
+        "std": 0.2333
+      },
+      "velocity.w.r2": {
+        "mean": -0.3094,
+        "std": 0.9317
+      },
+      "velocity.w.rmse": {
+        "mean": 0.2496,
+        "std": 0.0965
+      }
+    },
+    "split-joint": {
+      "accuracy": {
+        "mean": 0.775,
+        "std": 0.1167
+      },
+      "action.accuracy": {
+        "mean": 0.775,
+        "std": 0.1167
+      },
+      "action.per_class_recall.FORWARD.recall": {
+        "mean": 0.4679,
+        "std": 0.3911
+      },
+      "action.per_class_recall.FORWARD.support": {
+        "mean": 4.5,
+        "std": 3.0414
+      },
+      "action.per_class_recall.RIGHT_TURN.recall": {
+        "mean": 0.9278,
+        "std": 0.1021
+      },
+      "action.per_class_recall.RIGHT_TURN.support": {
+        "mean": 14.5,
+        "std": 4.9649
+      },
+      "ade": {
+        "mean": 0.1605,
+        "std": 0.0597
+      },
+      "ade_hold_last_command": {
+        "mean": 0.1567,
+        "std": 0.0383
+      },
+      "ade_oracle_commands": {
+        "mean": 0.0398,
+        "std": 0.0065
+      },
+      "fde": {
+        "mean": 0.3057,
+        "std": 0.1201
+      },
+      "fde_hold_last_command": {
+        "mean": 0.3347,
+        "std": 0.0871
+      },
+      "fde_oracle_commands": {
+        "mean": 0.0586,
+        "std": 0.0092
+      },
+      "fold": {
+        "mean": 4.5,
+        "std": 2.8723
+      },
+      "latent_dim": {
+        "mean": 3.8,
+        "std": 0.4
+      },
+      "min_ade_k5": {
+        "mean": 0.1589,
+        "std": 0.0589
+      },
+      "min_fde_k5": {
+        "mean": 0.3033,
+        "std": 0.1187
+      },
+      "mode.p_sampled_z": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "n_test": {
+        "mean": 21.1,
+        "std": 8.1541
+      },
+      "n_train": {
+        "mean": 189.9,
+        "std": 8.1541
+      },
+      "pca_explained": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "text_bank_coverage": {
+        "mean": 0.9458,
+        "std": 0.1087
+      },
+      "text_bank_size": {
+        "mean": 4.8,
+        "std": 0.4
+      },
+      "text_cosine_mean_baseline": {
+        "mean": 0.9341,
+        "std": 0.0463
+      },
+      "text_cosine_model": {
+        "mean": 0.949,
+        "std": 0.0362
+      },
+      "text_cosine_pca_ceiling": {
+        "mean": 0.9882,
+        "std": 0.0347
+      },
+      "text_n_unique_true": {
+        "mean": 2.7,
+        "std": 0.6403
+      },
+      "text_retrieval_accuracy": {
+        "mean": 0.7722,
+        "std": 0.1208
+      },
+      "text_retrieval_accuracy_covered": {
+        "mean": 0.8191,
+        "std": 0.1029
+      },
+      "train_loss.act": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_loss.flow": {
+        "mean": 0.0247,
+        "std": 0.0087
+      },
+      "train_loss.v": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_loss.w": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 30.02,
+        "std": 15.5293
+      },
+      "velocity.snapped_exact_match": {
+        "mean": 0.2031,
+        "std": 0.1131
+      },
+      "velocity.snapped_exact_match_step0": {
+        "mean": 0.1851,
+        "std": 0.1268
+      },
+      "velocity.snapped_v_mae": {
+        "mean": 0.1129,
+        "std": 0.0544
+      },
+      "velocity.snapped_w_mae": {
+        "mean": 0.145,
+        "std": 0.0799
+      },
+      "velocity.v.mae": {
+        "mean": 0.1249,
+        "std": 0.0469
+      },
+      "velocity.v.max_abs": {
+        "mean": 0.5478,
+        "std": 0.1436
+      },
+      "velocity.v.r2": {
+        "mean": -0.3741,
+        "std": 0.9071
+      },
+      "velocity.v.rmse": {
+        "mean": 0.1921,
+        "std": 0.0562
+      },
+      "velocity.w.mae": {
+        "mean": 0.1566,
+        "std": 0.0702
+      },
+      "velocity.w.max_abs": {
+        "mean": 0.5824,
+        "std": 0.1714
+      },
+      "velocity.w.r2": {
+        "mean": -0.1252,
+        "std": 0.8833
+      },
+      "velocity.w.rmse": {
+        "mean": 0.2279,
+        "std": 0.0877
+      }
+    },
+    "split-staged": {
+      "accuracy": {
+        "mean": 0.7697,
+        "std": 0.1171
+      },
+      "action.accuracy": {
+        "mean": 0.7697,
+        "std": 0.1171
+      },
+      "action.per_class_recall.FORWARD.recall": {
+        "mean": 0.4536,
+        "std": 0.3949
+      },
+      "action.per_class_recall.FORWARD.support": {
+        "mean": 4.5,
+        "std": 3.0414
+      },
+      "action.per_class_recall.RIGHT_TURN.recall": {
+        "mean": 0.9278,
+        "std": 0.1021
+      },
+      "action.per_class_recall.RIGHT_TURN.support": {
+        "mean": 14.5,
+        "std": 4.9649
+      },
+      "ade": {
+        "mean": 0.1603,
+        "std": 0.058
+      },
+      "ade_hold_last_command": {
+        "mean": 0.1567,
+        "std": 0.0383
+      },
+      "ade_oracle_commands": {
+        "mean": 0.0398,
+        "std": 0.0065
+      },
+      "epochs_stage_a": {
+        "mean": 120.0,
+        "std": 0.0
+      },
+      "epochs_stage_b": {
+        "mean": 180.0,
+        "std": 0.0
+      },
+      "fde": {
+        "mean": 0.3054,
+        "std": 0.1153
+      },
+      "fde_hold_last_command": {
+        "mean": 0.3347,
+        "std": 0.0871
+      },
+      "fde_oracle_commands": {
+        "mean": 0.0586,
+        "std": 0.0092
+      },
+      "fold": {
+        "mean": 4.5,
+        "std": 2.8723
+      },
+      "latent_dim": {
+        "mean": 3.8,
+        "std": 0.4
+      },
+      "min_ade_k5": {
+        "mean": 0.1555,
+        "std": 0.0564
+      },
+      "min_fde_k5": {
+        "mean": 0.298,
+        "std": 0.1122
+      },
+      "mode.p_sampled_z": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "mode.stage_a_frac": {
+        "mean": 0.4,
+        "std": 0.0
+      },
+      "n_test": {
+        "mean": 21.1,
+        "std": 8.1541
+      },
+      "n_train": {
+        "mean": 189.9,
+        "std": 8.1541
+      },
+      "pca_explained": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "stage_a_params": {
+        "mean": 959421.4,
+        "std": 205.2
+      },
+      "stage_b_params": {
+        "mean": 186621.8,
+        "std": 102.4
+      },
+      "text_bank_coverage": {
+        "mean": 0.9458,
+        "std": 0.1087
+      },
+      "text_bank_size": {
+        "mean": 4.8,
+        "std": 0.4
+      },
+      "text_cosine_mean_baseline": {
+        "mean": 0.9341,
+        "std": 0.0463
+      },
+      "text_cosine_model": {
+        "mean": 0.947,
+        "std": 0.0353
+      },
+      "text_cosine_pca_ceiling": {
+        "mean": 0.9882,
+        "std": 0.0347
+      },
+      "text_n_unique_true": {
+        "mean": 2.7,
+        "std": 0.6403
+      },
+      "text_retrieval_accuracy": {
+        "mean": 0.7652,
+        "std": 0.1178
+      },
+      "text_retrieval_accuracy_covered": {
+        "mean": 0.813,
+        "std": 0.1077
+      },
+      "train_loss.act": {
+        "mean": 0.0012,
+        "std": 0.0018
+      },
+      "train_loss.flow": {
+        "mean": 0.0559,
+        "std": 0.016
+      },
+      "train_loss.v": {
+        "mean": 0.001,
+        "std": 0.0004
+      },
+      "train_loss.w": {
+        "mean": 0.0006,
+        "std": 0.0002
+      },
+      "train_seconds": {
+        "mean": 11.16,
+        "std": 5.6819
+      },
+      "velocity.snapped_exact_match": {
+        "mean": 0.1999,
+        "std": 0.0891
+      },
+      "velocity.snapped_exact_match_step0": {
+        "mean": 0.2307,
+        "std": 0.1372
+      },
+      "velocity.snapped_v_mae": {
+        "mean": 0.1129,
+        "std": 0.0548
+      },
+      "velocity.snapped_w_mae": {
+        "mean": 0.1521,
+        "std": 0.0834
+      },
+      "velocity.v.mae": {
+        "mean": 0.1261,
+        "std": 0.0458
+      },
+      "velocity.v.max_abs": {
+        "mean": 0.5437,
+        "std": 0.157
+      },
+      "velocity.v.r2": {
+        "mean": -0.3779,
+        "std": 0.8728
+      },
+      "velocity.v.rmse": {
+        "mean": 0.1932,
+        "std": 0.0559
+      },
+      "velocity.w.mae": {
+        "mean": 0.1628,
+        "std": 0.0722
+      },
+      "velocity.w.max_abs": {
+        "mean": 0.5829,
+        "std": 0.1905
+      },
+      "velocity.w.r2": {
+        "mean": -0.1534,
+        "std": 0.8424
+      },
+      "velocity.w.rmse": {
+        "mean": 0.2348,
+        "std": 0.0943
+      }
+    },
+    "shared-pcgrad": {
+      "accuracy": {
+        "mean": 0.775,
+        "std": 0.1167
+      },
+      "action.accuracy": {
+        "mean": 0.775,
+        "std": 0.1167
+      },
+      "action.per_class_recall.FORWARD.recall": {
+        "mean": 0.5179,
+        "std": 0.3587
+      },
+      "action.per_class_recall.FORWARD.support": {
+        "mean": 4.5,
+        "std": 3.0414
+      },
+      "action.per_class_recall.RIGHT_TURN.recall": {
+        "mean": 0.913,
+        "std": 0.0988
+      },
+      "action.per_class_recall.RIGHT_TURN.support": {
+        "mean": 14.5,
+        "std": 4.9649
+      },
+      "ade": {
+        "mean": 0.158,
+        "std": 0.0563
+      },
+      "ade_hold_last_command": {
+        "mean": 0.1567,
+        "std": 0.0383
+      },
+      "ade_oracle_commands": {
+        "mean": 0.0398,
+        "std": 0.0065
+      },
+      "fde": {
+        "mean": 0.2994,
+        "std": 0.1157
+      },
+      "fde_hold_last_command": {
+        "mean": 0.3347,
+        "std": 0.0871
+      },
+      "fde_oracle_commands": {
+        "mean": 0.0586,
+        "std": 0.0092
+      },
+      "fold": {
+        "mean": 4.5,
+        "std": 2.8723
+      },
+      "frac_conflicting_over_training": {
+        "mean": 0.417,
+        "std": 0.0415
+      },
+      "grad_cosine_first_epoch.frac_conflicting_batches": {
+        "mean": 0.8,
+        "std": 0.4
+      },
+      "grad_cosine_first_epoch.grad_cosine_mean": {
+        "mean": -0.0027,
+        "std": 0.034
+      },
+      "grad_cosine_first_epoch.n_measured": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "grad_cosine_last_epoch.frac_conflicting_batches": {
+        "mean": 0.4,
+        "std": 0.4899
+      },
+      "grad_cosine_last_epoch.grad_cosine_mean": {
+        "mean": 0.029,
+        "std": 0.1169
+      },
+      "grad_cosine_last_epoch.n_measured": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "grad_cosine_mean_over_training": {
+        "mean": 0.0387,
+        "std": 0.009
+      },
+      "latent_dim": {
+        "mean": 3.8,
+        "std": 0.4
+      },
+      "min_ade_k5": {
+        "mean": 0.1561,
+        "std": 0.0558
+      },
+      "min_fde_k5": {
+        "mean": 0.2966,
+        "std": 0.115
+      },
+      "mode.p_sampled_z": {
+        "mean": 0.5,
+        "std": 0.0
+      },
+      "n_test": {
+        "mean": 21.1,
+        "std": 8.1541
+      },
+      "n_train": {
+        "mean": 189.9,
+        "std": 8.1541
+      },
+      "pca_explained": {
+        "mean": 1.0,
+        "std": 0.0
+      },
+      "pcgrad_projection_rate": {
+        "mean": 0.4052,
+        "std": 0.0128
+      },
+      "text_bank_coverage": {
+        "mean": 0.9458,
+        "std": 0.1087
+      },
+      "text_bank_size": {
+        "mean": 4.8,
+        "std": 0.4
+      },
+      "text_cosine_mean_baseline": {
+        "mean": 0.9341,
+        "std": 0.0463
+      },
+      "text_cosine_model": {
+        "mean": 0.9491,
+        "std": 0.036
+      },
+      "text_cosine_pca_ceiling": {
+        "mean": 0.9882,
+        "std": 0.0347
+      },
+      "text_n_unique_true": {
+        "mean": 2.7,
+        "std": 0.6403
+      },
+      "text_retrieval_accuracy": {
+        "mean": 0.768,
+        "std": 0.1251
+      },
+      "text_retrieval_accuracy_covered": {
+        "mean": 0.8132,
+        "std": 0.0972
+      },
+      "train_loss.act": {
+        "mean": 0.0001,
+        "std": 0.0
+      },
+      "train_loss.flow": {
+        "mean": 0.0231,
+        "std": 0.008
+      },
+      "train_loss.v": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_loss.w": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 33.09,
+        "std": 21.0198
+      },
+      "velocity.snapped_exact_match": {
+        "mean": 0.2074,
+        "std": 0.1077
+      },
+      "velocity.snapped_exact_match_step0": {
+        "mean": 0.1771,
+        "std": 0.1577
+      },
+      "velocity.snapped_v_mae": {
+        "mean": 0.1107,
+        "std": 0.055
+      },
+      "velocity.snapped_w_mae": {
+        "mean": 0.1424,
+        "std": 0.0808
+      },
+      "velocity.v.mae": {
+        "mean": 0.1248,
+        "std": 0.0454
+      },
+      "velocity.v.max_abs": {
+        "mean": 0.5347,
+        "std": 0.1538
+      },
+      "velocity.v.r2": {
+        "mean": -0.3142,
+        "std": 0.8153
+      },
+      "velocity.v.rmse": {
+        "mean": 0.1889,
+        "std": 0.0562
+      },
+      "velocity.w.mae": {
+        "mean": 0.1578,
+        "std": 0.0672
+      },
+      "velocity.w.max_abs": {
+        "mean": 0.5734,
+        "std": 0.1553
+      },
+      "velocity.w.r2": {
+        "mean": -0.1004,
+        "std": 0.8559
+      },
+      "velocity.w.rmse": {
+        "mean": 0.2254,
+        "std": 0.083
+      }
+    }
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "ablation": "b_vla_diffusion",
+  "mode": {
+    "trunk": "shared",
+    "grad_mode": "joint",
+    "p_sampled_z": 0.5,
+    "stage_a_frac": null
+  },
+  "model_size": {
+    "total_params": 1545965,
+    "by_module": {
+      "vehicle_encoder": 17408,
+      "img_proj": 73856,
+      "flow": 1188384,
+      "action_head": 198950,
+      "residual_head": 67367
+    },
+    "size_fp32_mb": 6.184,
+    "size_fp16_mb": 3.092,
+    "rollout_params": 0,
+    "rollout_note": "the kinematic rollout in dynamics.py has no parameters at all",
+    "flow_per_step_params": 612640,
+    "flow_hoisted_params": 575744
+  },
+  "dynamics_self_test": {
+    "n": 512,
+    "max_position_roundtrip_error_m": 1.4210854715202004e-14,
+    "max_action_roundtrip_error": 5.968558980384842e-13,
+    "all_rows_valid": true,
+    "passed": true
+  },
+  "identified_steering_map": {
+    "fitted": true,
+    "equation": "kappa = deg2rad(steeringAngleDeg) / (L_eff * (1 + K_us * vEgo^2))",
+    "inv_L_eff": 0.077262,
+    "L_eff_m": 12.943,
+    "K_us": 0.00275,
+    "n_fit": 26524,
+    "fit_v_min_mps": 3.0,
+    "residual_mse": 0.0010819,
+    "r2": 0.3002
+  },
+  "prior": "ca",
+  "dt_s": 0.15,
+  "n_steps": 19,
+  "n_waypoints": 20,
+  "horizon_s": 2.85,
+  "approximate_history": false,
+  "n_rows": {
+    "train": 35784,
+    "val": 3567,
+    "test": 3587
+  },
+  "baselines": {
+    "train": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0676,
+        "fde_m": 2.7544
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.9674,
+        "fde_m": 2.4672
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.1949,
+        "fde_m": 3.2803
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.1289,
+        "fde_m": 3.1278
+      }
+    },
+    "val": {
+      "cv": {
+        "params": 0,
+        "ade_m": 0.996,
+        "fde_m": 2.6094
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.8692,
+        "fde_m": 2.2366
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.1089,
+        "fde_m": 3.0893
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.0115,
+        "fde_m": 2.8351
+      }
+    },
+    "test": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.3019,
+        "fde_m": 3.0658
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 1.1966,
+        "fde_m": 2.7576
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.4082,
+        "fde_m": 3.5207
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.338,
+        "fde_m": 3.3495
+      }
+    }
+  },
+  "oracle_actions": {
+    "train": {
+      "exact": {
+        "ade_m": 0.126759
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.3242,
+        "fde_m": 0.768,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    },
+    "val": {
+      "exact": {
+        "ade_m": 0.052468
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.2428,
+        "fde_m": 0.585,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    },
+    "test": {
+      "exact": {
+        "ade_m": 0.341715
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.5546,
+        "fde_m": 1.0607,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    }
+  },
+  "pca": {
+    "latent_dim": 32,
+    "explained_variance_ratio_cumulative_train": 0.9017,
+    "explained_variance_ratio_per_component": [
+      0.14032,
+      0.12633,
+      0.08214,
+      0.06906,
+      0.05667,
+      0.04477,
+      0.04195,
+      0.03337,
+      0.03195,
+      0.02898,
+      0.02495,
+      0.02324,
+      0.02193,
+      0.01932,
+      0.01777,
+      0.01698,
+      0.01322,
+      0.01281,
+      0.01091,
+      0.00985,
+      0.00939,
+      0.00875,
+      0.00822,
+      0.00687,
+      0.00636,
+      0.00631,
+      0.00561,
+      0.00531,
+      0.00503,
+      0.00472,
+      0.00438,
+      0.00428
+    ],
+    "train": {
+      "n": 35784,
+      "reconstruction_mse": 2.5e-05,
+      "reconstruction_cosine": 0.9952
+    },
+    "val": {
+      "n": 3567,
+      "reconstruction_mse": 2.4e-05,
+      "reconstruction_cosine": 0.9953
+    },
+    "test": {
+      "n": 3587,
+      "reconstruction_mse": 2.5e-05,
+      "reconstruction_cosine": 0.9951
+    }
+  },
+  "history_log": [
+    {
+      "epoch": 0,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 1.4859038642474582,
+      "traj_loss": 0.36671639276402335,
+      "val_ade": 0.8173497319221497,
+      "val_fde": 2.09212327003479,
+      "grad_cosine_mean": 0.0042,
+      "frac_conflicting_batches": 0.3333,
+      "n_measured": 6
+    },
+    {
+      "epoch": 1,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 1.1240497052669525,
+      "traj_loss": 0.32118297048977446,
+      "val_ade": 0.7114237546920776,
+      "val_fde": 1.8289512395858765,
+      "grad_cosine_mean": -0.0052,
+      "frac_conflicting_batches": 0.5,
+      "n_measured": 6
+    },
+    {
+      "epoch": 2,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 1.0281350855316436,
+      "traj_loss": 0.25926530829497746,
+      "val_ade": 0.6187955737113953,
+      "val_fde": 1.5846192836761475,
+      "grad_cosine_mean": -0.0207,
+      "frac_conflicting_batches": 0.8333,
+      "n_measured": 6
+    },
+    {
+      "epoch": 3,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.9814928927591868,
+      "traj_loss": 0.24756178760102818,
+      "val_ade": 0.6279721260070801,
+      "val_fde": 1.609409213066101,
+      "grad_cosine_mean": 0.0091,
+      "frac_conflicting_batches": 0.5,
+      "n_measured": 6
+    },
+    {
+      "epoch": 4,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.9373316011258535,
+      "traj_loss": 0.24313955833869322,
+      "val_ade": 0.6118139624595642,
+      "val_fde": 1.5662219524383545,
+      "grad_cosine_mean": -0.0112,
+      "frac_conflicting_batches": 0.6667,
+      "n_measured": 6
+    },
+    {
+      "epoch": 5,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.9068606006247657,
+      "traj_loss": 0.2400501215032169,
+      "val_ade": 0.6078435182571411,
+      "val_fde": 1.5539047718048096,
+      "grad_cosine_mean": 0.0072,
+      "frac_conflicting_batches": 0.5,
+      "n_measured": 6
+    },
+    {
+      "epoch": 6,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.8862795697791236,
+      "traj_loss": 0.23574865737131664,
+      "val_ade": 0.6025527119636536,
+      "val_fde": 1.538906216621399,
+      "grad_cosine_mean": -0.0002,
+      "frac_conflicting_batches": 0.3333,
+      "n_measured": 6
+    },
+    {
+      "epoch": 7,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.8659698341573988,
+      "traj_loss": 0.2330437447875738,
+      "val_ade": 0.610124945640564,
+      "val_fde": 1.5581921339035034,
+      "grad_cosine_mean": -0.0049,
+      "frac_conflicting_batches": 0.5,
+      "n_measured": 6
+    },
+    {
+      "epoch": 8,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.8401614482913699,
+      "traj_loss": 0.23041299773114068,
+      "val_ade": 0.5999286770820618,
+      "val_fde": 1.529403567314148,
+      "grad_cosine_mean": -0.0069,
+      "frac_conflicting_batches": 0.5,
+      "n_measured": 6
+    },
+    {
+      "epoch": 9,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.8251805143696921,
+      "traj_loss": 0.2279296704701015,
+      "val_ade": 0.6010028719902039,
+      "val_fde": 1.5330384969711304,
+      "grad_cosine_mean": 0.0176,
+      "frac_conflicting_batches": 0.1667,
+      "n_measured": 6
+    },
+    {
+      "epoch": 10,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.8065058141946793,
+      "traj_loss": 0.22526127493807246,
+      "val_ade": 0.6070936322212219,
+      "val_fde": 1.5528570413589478,
+      "grad_cosine_mean": -0.0318,
+      "frac_conflicting_batches": 0.6667,
+      "n_measured": 6
+    },
+    {
+      "epoch": 11,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.7909688723938806,
+      "traj_loss": 0.22278819153351442,
+      "val_ade": 0.5926868319511414,
+      "val_fde": 1.5062062740325928,
+      "grad_cosine_mean": 0.0113,
+      "frac_conflicting_batches": 0.5,
+      "n_measured": 6
+    },
+    {
+      "epoch": 12,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.7785395515816552,
+      "traj_loss": 0.22011894275035176,
+      "val_ade": 0.601165235042572,
+      "val_fde": 1.5299413204193115,
+      "grad_cosine_mean": -0.0037,
+      "frac_conflicting_batches": 0.6667,
+      "n_measured": 6
+    },
+    {
+      "epoch": 13,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.7642134883574077,
+      "traj_loss": 0.21890171580016612,
+      "val_ade": 0.5975730419158936,
+      "val_fde": 1.5238183736801147,
+      "grad_cosine_mean": 0.0007,
+      "frac_conflicting_batches": 0.6667,
+      "n_measured": 6
+    },
+    {
+      "epoch": 14,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.7531721813338144,
+      "traj_loss": 0.2163676932454109,
+      "val_ade": 0.6017347574234009,
+      "val_fde": 1.5378124713897705,
+      "grad_cosine_mean": 0.0123,
+      "frac_conflicting_batches": 0.3333,
+      "n_measured": 6
+    },
+    {
+      "epoch": 15,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.7451788697923932,
+      "traj_loss": 0.21486415580979415,
+      "val_ade": 0.5936066508293152,
+      "val_fde": 1.5072178840637207,
+      "grad_cosine_mean": 0.0179,
+      "frac_conflicting_batches": 0.3333,
+      "n_measured": 6
+    },
+    {
+      "epoch": 16,
+      "phase": "joint",
+      "pretrain": false,
+      "flow_loss": 0.7331007531711033,
+      "traj_loss": 0.2128262871610267,
+      "val_ade": 0.5975148677825928,
+      "val_fde": 1.5224723815917969,
+      "grad_cosine_mean": -0.0175,
+      "frac_conflicting_batches": 0.6667,
+      "n_measured": 6
+    }
+  ],
+  "best_epoch": 11,
+  "best_val_ade": 0.5927,
+  "epochs_stage_a": null,
+  "epochs_stage_b": null,
+  "grad_cosine_mean_over_training": -0.0013,
+  "frac_conflicting_over_training": 0.5098,
+  "train": {
+    "n": 35784,
+    "ade_m": 0.6315,
+    "fde_m": 1.5729,
+    "ade_median_m": 0.3726,
+    "fde_p90_m": 2.7104,
+    "per_step_displacement_m": [
+      0.0,
+      0.0487,
+      0.1234,
+      0.1605,
+      0.2114,
+      0.2893,
+      0.3324,
+      0.3798,
+      0.4401,
+      0.5035,
+      0.5655,
+      0.6398,
+      0.7239,
+      0.8197,
+      0.9163,
+      1.043,
+      1.1669,
+      1.2804,
+      1.4118,
+      1.5729
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1192,
+        "std": 0.5117,
+        "p01": -1.6999,
+        "p99": 1.0767,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": 0.001394,
+        "std": 0.013808,
+        "p01": -0.051967,
+        "p99": 0.058542,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.187,
+      "residual": {
+        "mean_abs_m": 0.2346,
+        "final_step_mean_abs_m": 0.5846,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    },
+    "min_ade_k5": 0.5914,
+    "min_fde_k5": 1.4502,
+    "text": {
+      "n": 35784,
+      "cosine_model": 0.9536,
+      "cosine_pca_ceiling": 0.9952,
+      "cosine_mean_baseline": 0.9411,
+      "scaled_score": 0.2307
+    }
+  },
+  "val": {
+    "n": 3567,
+    "ade_m": 0.5936,
+    "fde_m": 1.5091,
+    "ade_median_m": 0.3903,
+    "fde_p90_m": 2.9641,
+    "per_step_displacement_m": [
+      0.0,
+      0.0455,
+      0.0829,
+      0.1195,
+      0.2178,
+      0.258,
+      0.3024,
+      0.3521,
+      0.4081,
+      0.4661,
+      0.533,
+      0.6049,
+      0.6866,
+      0.7742,
+      0.8711,
+      0.972,
+      1.0889,
+      1.2081,
+      1.3711,
+      1.5091
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1227,
+        "std": 0.5284,
+        "p01": -1.8525,
+        "p99": 1.0609,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": 0.001454,
+        "std": 0.014235,
+        "p01": -0.04909,
+        "p99": 0.061602,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1935,
+      "residual": {
+        "mean_abs_m": 0.2235,
+        "final_step_mean_abs_m": 0.5572,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    },
+    "min_ade_k5": 0.5523,
+    "min_fde_k5": 1.3828,
+    "text": {
+      "n": 3567,
+      "cosine_model": 0.9506,
+      "cosine_pca_ceiling": 0.9953,
+      "cosine_mean_baseline": 0.9399,
+      "scaled_score": 0.193
+    }
+  },
+  "test": {
+    "n": 3587,
+    "ade_m": 0.9055,
+    "fde_m": 1.9921,
+    "ade_median_m": 0.4128,
+    "fde_p90_m": 3.0447,
+    "per_step_displacement_m": [
+      0.0,
+      0.1317,
+      0.1952,
+      0.2298,
+      0.2695,
+      0.5682,
+      0.6238,
+      0.6783,
+      0.7377,
+      0.8058,
+      0.8791,
+      0.9616,
+      1.0792,
+      1.1796,
+      1.2836,
+      1.3985,
+      1.5477,
+      1.7056,
+      1.8435,
+      1.9921
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1173,
+        "std": 0.5297,
+        "p01": -1.7146,
+        "p99": 1.1178,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": 0.001119,
+        "std": 0.014057,
+        "p01": -0.057564,
+        "p99": 0.055226,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1893,
+      "residual": {
+        "mean_abs_m": 0.2324,
+        "final_step_mean_abs_m": 0.5806,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    },
+    "min_ade_k5": 0.8636,
+    "min_fde_k5": 1.8663,
+    "text": {
+      "n": 3587,
+      "cosine_model": 0.9499,
+      "cosine_pca_ceiling": 0.9951,
+      "cosine_mean_baseline": 0.9405,
+      "scaled_score": 0.1719
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "fold": 3,
+  "held_out": "scenario_3_run_02",
+  "n_train": 303,
+  "n_test": 28,
+  "latent_dim": 8,
+  "pca_explained": 1.0,
+  "ade": 0.1952,
+  "fde": 0.3314,
+  "min_ade_k5": 0.1937,
+  "min_fde_k5": 0.3299,
+  "train_seconds": 21.1,
+  "text_cosine_model": 0.9241,
+  "text_cosine_pca_ceiling": 1.0,
+  "text_cosine_mean_baseline": 0.9077,
+  "text_retrieval_accuracy": 0.7143,
+  "text_retrieval_accuracy_covered": 0.7143,
+  "text_bank_coverage": 1.0,
+  "text_bank_size": 9,
+  "text_n_unique_true": 4,
+  "action": {
+    "accuracy": 0.75,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 11,
+        "recall": 0.5455
+      },
+      "RIGHT_TURN": {
+        "support": 11,
+        "recall": 1.0
+      },
+      "STOP": {
+        "support": 6,
+        "recall": 0.6667
+      }
+    }
+  },
+  "accuracy": 0.75,
+  "step_sweep": {
+    "1": {
+      "ade": 0.1955,
+      "fde": 0.3363,
+      "acc": 0.75,
+      "cosine": 0.9281,
+      "ms_per_sample": 0.033
+    },
+    "2": {
+      "ade": 0.1952,
+      "fde": 0.3321,
+      "acc": 0.75,
+      "cosine": 0.9256,
+      "ms_per_sample": 0.049
+    },
+    "4": {
+      "ade": 0.1952,
+      "fde": 0.3314,
+      "acc": 0.75,
+      "cosine": 0.9241,
+      "ms_per_sample": 0.083
+    },
+    "8": {
+      "ade": 0.1954,
+      "fde": 0.3315,
+      "acc": 0.75,
+      "cosine": 0.9259,
+      "ms_per_sample": 0.157
+    }
+  }
+}

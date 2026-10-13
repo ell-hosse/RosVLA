@@ -1,0 +1,351 @@
+{
+  "variant": "no_text_ablation",
+  "match_params": 0,
+  "n_folds": 10,
+  "model_size": {
+    "total_params": 184749,
+    "by_module": {
+      "img_proj": 73856,
+      "tel_proj": 544,
+      "head": 110349
+    },
+    "size_fp32_mb": 0.739,
+    "size_fp16_mb": 0.369,
+    "trunk_hidden": 256
+  },
+  "config": {
+    "dataset_dir": "D:\\Personal Projects\\vlam-rosmaster-x3\\dataset",
+    "out_dir": "D:\\Personal Projects\\vlam-rosmaster-x3\\vla\\no_text_ablation\\runs",
+    "cache_dir": "D:\\Personal Projects\\vlam-rosmaster-x3\\vla\\defussion_text_generator\\cache",
+    "text_field": "trajectory_text",
+    "n_waypoints": "4",
+    "drop_first_waypoint": "True",
+    "telemetry_keys": "('odom_linear_velocity', 'odom_angular_velocity', 'imu_linear_acceleration', 'imu_attitude', 'wheel_speed_encoder_per_sec')",
+    "cnn_name": "mobilenet_v3_small",
+    "image_size": "224",
+    "img_proj_dim": "128",
+    "tel_proj_dim": "32",
+    "hidden_dim": "256",
+    "n_blocks": "3",
+    "match_params": "0",
+    "epochs": "300",
+    "batch_size": "32",
+    "lr": "0.001",
+    "weight_decay": "0.0001",
+    "w_traj": "1.0",
+    "w_action": "1.0",
+    "seed": "0",
+    "device": "cpu",
+    "action_classes": "('FORWARD', 'RIGHT_TURN', 'LEFT_TURN', 'STOP', 'REVERSE_LEFT')"
+  },
+  "average": {
+    "fold": {
+      "mean": 4.5,
+      "std": 2.8723
+    },
+    "n_train": {
+      "mean": 297.9,
+      "std": 8.1541
+    },
+    "n_test": {
+      "mean": 33.1,
+      "std": 8.1541
+    },
+    "ade": {
+      "mean": 0.1755,
+      "std": 0.0565
+    },
+    "fde": {
+      "mean": 0.2496,
+      "std": 0.0825
+    },
+    "accuracy": {
+      "mean": 0.6752,
+      "std": 0.111
+    },
+    "train_seconds": {
+      "mean": 8.45,
+      "std": 1.716
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "held_out": "scenario_10_run_02",
+      "n_train": 295,
+      "n_test": 36,
+      "ade": 0.2576,
+      "fde": 0.3734,
+      "accuracy": 0.5833,
+      "action": {
+        "accuracy": 0.5833,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 8,
+            "recall": 0.75
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 8,
+            "recall": 0.5
+          },
+          "REVERSE_LEFT": {
+            "support": 9,
+            "recall": 0.0
+          }
+        }
+      },
+      "train_seconds": 9.2
+    },
+    {
+      "fold": 1,
+      "held_out": "scenario_1_run_03",
+      "n_train": 308,
+      "n_test": 23,
+      "ade": 0.1829,
+      "fde": 0.2751,
+      "accuracy": 0.6087,
+      "action": {
+        "accuracy": 0.6087,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 9,
+            "recall": 0.3333
+          },
+          "RIGHT_TURN": {
+            "support": 10,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 4,
+            "recall": 0.25
+          }
+        }
+      },
+      "train_seconds": 7.1
+    },
+    {
+      "fold": 2,
+      "held_out": "scenario_2_run_06",
+      "n_train": 300,
+      "n_test": 31,
+      "ade": 0.1659,
+      "fde": 0.2236,
+      "accuracy": 0.7419,
+      "action": {
+        "accuracy": 0.7419,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 14,
+            "recall": 0.7857
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 6,
+            "recall": 0.1667
+          }
+        }
+      },
+      "train_seconds": 7.2
+    },
+    {
+      "fold": 3,
+      "held_out": "scenario_3_run_02",
+      "n_train": 303,
+      "n_test": 28,
+      "ade": 0.183,
+      "fde": 0.2475,
+      "accuracy": 0.8214,
+      "action": {
+        "accuracy": 0.8214,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 11,
+            "recall": 0.7273
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 6,
+            "recall": 0.6667
+          }
+        }
+      },
+      "train_seconds": 7.1
+    },
+    {
+      "fold": 4,
+      "held_out": "scenario_4_run_03",
+      "n_train": 296,
+      "n_test": 35,
+      "ade": 0.0924,
+      "fde": 0.1206,
+      "accuracy": 0.8,
+      "action": {
+        "accuracy": 0.8,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 9,
+            "recall": 0.6667
+          },
+          "RIGHT_TURN": {
+            "support": 22,
+            "recall": 0.9091
+          },
+          "STOP": {
+            "support": 4,
+            "recall": 0.5
+          }
+        }
+      },
+      "train_seconds": 7.9
+    },
+    {
+      "fold": 5,
+      "held_out": "scenario_5_run_02",
+      "n_train": 306,
+      "n_test": 25,
+      "ade": 0.2575,
+      "fde": 0.3607,
+      "accuracy": 0.64,
+      "action": {
+        "accuracy": 0.64,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 10,
+            "recall": 0.6
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 0.7273
+          },
+          "STOP": {
+            "support": 4,
+            "recall": 0.5
+          }
+        }
+      },
+      "train_seconds": 7.9
+    },
+    {
+      "fold": 6,
+      "held_out": "scenario_6_run_02",
+      "n_train": 306,
+      "n_test": 25,
+      "ade": 0.2308,
+      "fde": 0.3288,
+      "accuracy": 0.44,
+      "action": {
+        "accuracy": 0.44,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 9,
+            "recall": 0.3333
+          },
+          "RIGHT_TURN": {
+            "support": 12,
+            "recall": 0.4167
+          },
+          "STOP": {
+            "support": 4,
+            "recall": 0.75
+          }
+        }
+      },
+      "train_seconds": 7.8
+    },
+    {
+      "fold": 7,
+      "held_out": "scenario_7_run_02",
+      "n_train": 297,
+      "n_test": 34,
+      "ade": 0.1457,
+      "fde": 0.2039,
+      "accuracy": 0.6471,
+      "action": {
+        "accuracy": 0.6471,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 5,
+            "recall": 1.0
+          },
+          "RIGHT_TURN": {
+            "support": 21,
+            "recall": 0.619
+          },
+          "STOP": {
+            "support": 8,
+            "recall": 0.5
+          }
+        }
+      },
+      "train_seconds": 7.9
+    },
+    {
+      "fold": 8,
+      "held_out": "scenario_8_run_03",
+      "n_train": 283,
+      "n_test": 48,
+      "ade": 0.0955,
+      "fde": 0.1326,
+      "accuracy": 0.6875,
+      "action": {
+        "accuracy": 0.6875,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 9,
+            "recall": 0.7778
+          },
+          "RIGHT_TURN": {
+            "support": 22,
+            "recall": 0.9091
+          },
+          "LEFT_TURN": {
+            "support": 11,
+            "recall": 0.0
+          },
+          "STOP": {
+            "support": 6,
+            "recall": 1.0
+          }
+        }
+      },
+      "train_seconds": 9.3
+    },
+    {
+      "fold": 9,
+      "held_out": "scenario_9_run_02",
+      "n_train": 285,
+      "n_test": 46,
+      "ade": 0.1436,
+      "fde": 0.2302,
+      "accuracy": 0.7826,
+      "action": {
+        "accuracy": 0.7826,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 16,
+            "recall": 0.75
+          },
+          "RIGHT_TURN": {
+            "support": 22,
+            "recall": 0.9545
+          },
+          "STOP": {
+            "support": 8,
+            "recall": 0.375
+          }
+        }
+      },
+      "train_seconds": 13.1
+    }
+  ]
+}

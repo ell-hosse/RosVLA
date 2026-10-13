@@ -1,0 +1,5 @@
+numpy>=1.24
+torch>=2.1
+torchvision>=0.16
+opencv-python>=4.7          # decodes the clip mp4s (once; features are cached)
+sentence-transformers>=2.2  # all-MiniLM-L6-v2, embeds the captions once

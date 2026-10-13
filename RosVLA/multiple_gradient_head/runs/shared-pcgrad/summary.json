@@ -1,0 +1,1312 @@
+{
+  "mode": {
+    "trunk": "shared",
+    "grad_mode": "pcgrad",
+    "p_sampled_z": 0.5,
+    "stage_a_frac": null
+  },
+  "n_folds": 10,
+  "model_size": {
+    "total_params": 1071156,
+    "by_module": {
+      "img_proj": 73856,
+      "tel_proj": 416,
+      "flow": 884739,
+      "head": 112145
+    },
+    "size_fp32_mb": 4.285,
+    "size_fp16_mb": 2.142,
+    "flow_per_step_params": 448771,
+    "flow_hoisted_params": 435968
+  },
+  "config": {
+    "dataset_dir": "C:\\Users\\elahe\\PycharmProjects\\vlam-rosmaster-x3\\dataset",
+    "out_dir": "C:\\Users\\elahe\\PycharmProjects\\vlam-rosmaster-x3\\RosVLA\\velocity_head\\runs",
+    "cache_dir": "C:\\Users\\elahe\\PycharmProjects\\vlam-rosmaster-x3\\RosVLA\\defussion_text_generator\\cache",
+    "calculator_dir": "C:\\Users\\elahe\\PycharmProjects\\vlam-rosmaster-x3\\RosVLA\\trajectory_predictor\\trajectory_predictors",
+    "text_field": "action_text",
+    "hist": "6",
+    "horizon": "6",
+    "cnn_name": "mobilenet_v3_small",
+    "image_size": "224",
+    "text_encoder": "sentence-transformers/all-MiniLM-L6-v2",
+    "pca_dim": "8",
+    "img_proj_dim": "128",
+    "tel_proj_dim": "32",
+    "hidden_dim": "256",
+    "n_blocks": "3",
+    "flow_steps": "4",
+    "step_sweep": "(1, 2, 4, 8)",
+    "n_samples_eval": "5",
+    "epochs": "300",
+    "batch_size": "32",
+    "lr": "0.001",
+    "weight_decay": "0.0001",
+    "w_flow": "1.0",
+    "w_vel": "1.0",
+    "w_ang": "1.0",
+    "w_action": "0.5",
+    "p_sampled_z": "0.5",
+    "seed": "0",
+    "device": "cpu",
+    "action_classes": "('FORWARD', 'RIGHT_TURN', 'LEFT_TURN', 'STOP', 'REVERSE_LEFT')"
+  },
+  "average": {
+    "accuracy": {
+      "mean": 0.775,
+      "std": 0.1167
+    },
+    "action.accuracy": {
+      "mean": 0.775,
+      "std": 0.1167
+    },
+    "action.per_class_recall.FORWARD.recall": {
+      "mean": 0.5179,
+      "std": 0.3587
+    },
+    "action.per_class_recall.FORWARD.support": {
+      "mean": 4.5,
+      "std": 3.0414
+    },
+    "action.per_class_recall.RIGHT_TURN.recall": {
+      "mean": 0.913,
+      "std": 0.0988
+    },
+    "action.per_class_recall.RIGHT_TURN.support": {
+      "mean": 14.5,
+      "std": 4.9649
+    },
+    "ade": {
+      "mean": 0.158,
+      "std": 0.0563
+    },
+    "ade_hold_last_command": {
+      "mean": 0.1567,
+      "std": 0.0383
+    },
+    "ade_oracle_commands": {
+      "mean": 0.0398,
+      "std": 0.0065
+    },
+    "fde": {
+      "mean": 0.2994,
+      "std": 0.1157
+    },
+    "fde_hold_last_command": {
+      "mean": 0.3347,
+      "std": 0.0871
+    },
+    "fde_oracle_commands": {
+      "mean": 0.0586,
+      "std": 0.0092
+    },
+    "fold": {
+      "mean": 4.5,
+      "std": 2.8723
+    },
+    "frac_conflicting_over_training": {
+      "mean": 0.417,
+      "std": 0.0415
+    },
+    "grad_cosine_first_epoch.frac_conflicting_batches": {
+      "mean": 0.8,
+      "std": 0.4
+    },
+    "grad_cosine_first_epoch.grad_cosine_mean": {
+      "mean": -0.0027,
+      "std": 0.034
+    },
+    "grad_cosine_first_epoch.n_measured": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "grad_cosine_last_epoch.frac_conflicting_batches": {
+      "mean": 0.4,
+      "std": 0.4899
+    },
+    "grad_cosine_last_epoch.grad_cosine_mean": {
+      "mean": 0.029,
+      "std": 0.1169
+    },
+    "grad_cosine_last_epoch.n_measured": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "grad_cosine_mean_over_training": {
+      "mean": 0.0387,
+      "std": 0.009
+    },
+    "latent_dim": {
+      "mean": 3.8,
+      "std": 0.4
+    },
+    "min_ade_k5": {
+      "mean": 0.1561,
+      "std": 0.0558
+    },
+    "min_fde_k5": {
+      "mean": 0.2966,
+      "std": 0.115
+    },
+    "mode.p_sampled_z": {
+      "mean": 0.5,
+      "std": 0.0
+    },
+    "n_test": {
+      "mean": 21.1,
+      "std": 8.1541
+    },
+    "n_train": {
+      "mean": 189.9,
+      "std": 8.1541
+    },
+    "pca_explained": {
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "pcgrad_projection_rate": {
+      "mean": 0.4052,
+      "std": 0.0128
+    },
+    "text_bank_coverage": {
+      "mean": 0.9458,
+      "std": 0.1087
+    },
+    "text_bank_size": {
+      "mean": 4.8,
+      "std": 0.4
+    },
+    "text_cosine_mean_baseline": {
+      "mean": 0.9341,
+      "std": 0.0463
+    },
+    "text_cosine_model": {
+      "mean": 0.9491,
+      "std": 0.036
+    },
+    "text_cosine_pca_ceiling": {
+      "mean": 0.9882,
+      "std": 0.0347
+    },
+    "text_n_unique_true": {
+      "mean": 2.7,
+      "std": 0.6403
+    },
+    "text_retrieval_accuracy": {
+      "mean": 0.768,
+      "std": 0.1251
+    },
+    "text_retrieval_accuracy_covered": {
+      "mean": 0.8132,
+      "std": 0.0972
+    },
+    "train_loss.act": {
+      "mean": 0.0001,
+      "std": 0.0
+    },
+    "train_loss.flow": {
+      "mean": 0.0231,
+      "std": 0.008
+    },
+    "train_loss.v": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "train_loss.w": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "train_seconds": {
+      "mean": 33.09,
+      "std": 21.0198
+    },
+    "velocity.snapped_exact_match": {
+      "mean": 0.2074,
+      "std": 0.1077
+    },
+    "velocity.snapped_exact_match_step0": {
+      "mean": 0.1771,
+      "std": 0.1577
+    },
+    "velocity.snapped_v_mae": {
+      "mean": 0.1107,
+      "std": 0.055
+    },
+    "velocity.snapped_w_mae": {
+      "mean": 0.1424,
+      "std": 0.0808
+    },
+    "velocity.v.mae": {
+      "mean": 0.1248,
+      "std": 0.0454
+    },
+    "velocity.v.max_abs": {
+      "mean": 0.5347,
+      "std": 0.1538
+    },
+    "velocity.v.r2": {
+      "mean": -0.3142,
+      "std": 0.8153
+    },
+    "velocity.v.rmse": {
+      "mean": 0.1889,
+      "std": 0.0562
+    },
+    "velocity.w.mae": {
+      "mean": 0.1578,
+      "std": 0.0672
+    },
+    "velocity.w.max_abs": {
+      "mean": 0.5734,
+      "std": 0.1553
+    },
+    "velocity.w.r2": {
+      "mean": -0.1004,
+      "std": 0.8559
+    },
+    "velocity.w.rmse": {
+      "mean": 0.2254,
+      "std": 0.083
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "held_out": "scenario_10_run_02",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_00_scenario_10_run_02.json",
+      "n_train": 187,
+      "n_test": 24,
+      "latent_dim": 3,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.02281,
+        "v": 2e-05,
+        "w": 3e-05,
+        "act": 5e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0023,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": -0.1984,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0304,
+      "frac_conflicting_over_training": 0.4467,
+      "pcgrad_projection_rate": 0.4206,
+      "velocity": {
+        "v": {
+          "mae": 0.2309,
+          "rmse": 0.3215,
+          "max_abs": 0.7854,
+          "r2": -0.7091,
+          "mae_per_step": [
+            0.1681,
+            0.1961,
+            0.2466,
+            0.2793,
+            0.2673,
+            0.2278
+          ]
+        },
+        "w": {
+          "mae": 0.2913,
+          "rmse": 0.3965,
+          "max_abs": 0.9083,
+          "r2": -0.0836,
+          "mae_per_step": [
+            0.2318,
+            0.2659,
+            0.2812,
+            0.2978,
+            0.3491,
+            0.3219
+          ]
+        },
+        "snapped_exact_match": 0.1458,
+        "snapped_exact_match_step0": 0.2917,
+        "snapped_v_mae": 0.2346,
+        "snapped_w_mae": 0.3163
+      },
+      "ade": 0.2775,
+      "fde": 0.5342,
+      "ade_oracle_commands": 0.0396,
+      "fde_oracle_commands": 0.0509,
+      "ade_hold_last_command": 0.2044,
+      "fde_hold_last_command": 0.4317,
+      "min_ade_k5": 0.2757,
+      "min_fde_k5": 0.531,
+      "action": {
+        "accuracy": 0.6667,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 5,
+            "recall": 1.0
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 0.9091
+          },
+          "STOP": {
+            "support": 1,
+            "recall": 1.0
+          },
+          "REVERSE_LEFT": {
+            "support": 7,
+            "recall": 0.0
+          }
+        }
+      },
+      "accuracy": 0.6667,
+      "text_cosine_model": 0.8544,
+      "text_cosine_pca_ceiling": 0.884,
+      "text_cosine_mean_baseline": 0.8119,
+      "text_retrieval_accuracy": 0.625,
+      "text_retrieval_accuracy_covered": 0.8824,
+      "text_bank_coverage": 0.7083,
+      "text_bank_size": 4,
+      "text_n_unique_true": 4,
+      "train_seconds": 66.5
+    },
+    {
+      "fold": 1,
+      "held_out": "scenario_1_run_03",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_01_scenario_1_run_03.json",
+      "n_train": 200,
+      "n_test": 11,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.01452,
+        "v": 5e-05,
+        "w": 4e-05,
+        "act": 6e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": 0.0291,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": -0.0286,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.044,
+      "frac_conflicting_over_training": 0.3933,
+      "pcgrad_projection_rate": 0.3838,
+      "velocity": {
+        "v": {
+          "mae": 0.1259,
+          "rmse": 0.1999,
+          "max_abs": 0.4597,
+          "r2": -0.1342,
+          "mae_per_step": [
+            0.0703,
+            0.0811,
+            0.0769,
+            0.1765,
+            0.1714,
+            0.1791
+          ]
+        },
+        "w": {
+          "mae": 0.1409,
+          "rmse": 0.2235,
+          "max_abs": 0.5715,
+          "r2": -0.0671,
+          "mae_per_step": [
+            0.0826,
+            0.0988,
+            0.0935,
+            0.1943,
+            0.1924,
+            0.1836
+          ]
+        },
+        "snapped_exact_match": 0.2424,
+        "snapped_exact_match_step0": 0.0,
+        "snapped_v_mae": 0.1112,
+        "snapped_w_mae": 0.1375
+      },
+      "ade": 0.1532,
+      "fde": 0.3092,
+      "ade_oracle_commands": 0.0406,
+      "fde_oracle_commands": 0.0594,
+      "ade_hold_last_command": 0.1477,
+      "fde_hold_last_command": 0.3207,
+      "min_ade_k5": 0.1527,
+      "min_fde_k5": 0.3085,
+      "action": {
+        "accuracy": 0.8182,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 2,
+            "recall": 0.0
+          },
+          "RIGHT_TURN": {
+            "support": 9,
+            "recall": 1.0
+          }
+        }
+      },
+      "accuracy": 0.8182,
+      "text_cosine_model": 0.9591,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9646,
+      "text_retrieval_accuracy": 0.8182,
+      "text_retrieval_accuracy_covered": 0.8182,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 2,
+      "train_seconds": 48.5
+    },
+    {
+      "fold": 2,
+      "held_out": "scenario_2_run_06",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_02_scenario_2_run_06.json",
+      "n_train": 192,
+      "n_test": 19,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.01703,
+        "v": 3e-05,
+        "w": 4e-05,
+        "act": 6e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0111,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": -0.0339,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0211,
+      "frac_conflicting_over_training": 0.4733,
+      "pcgrad_projection_rate": 0.4061,
+      "velocity": {
+        "v": {
+          "mae": 0.0797,
+          "rmse": 0.1406,
+          "max_abs": 0.3635,
+          "r2": 0.4458,
+          "mae_per_step": [
+            0.083,
+            0.0896,
+            0.0961,
+            0.0763,
+            0.0672,
+            0.0658
+          ]
+        },
+        "w": {
+          "mae": 0.0893,
+          "rmse": 0.1551,
+          "max_abs": 0.415,
+          "r2": 0.4902,
+          "mae_per_step": [
+            0.0956,
+            0.1022,
+            0.1026,
+            0.0946,
+            0.0765,
+            0.0645
+          ]
+        },
+        "snapped_exact_match": 0.4474,
+        "snapped_exact_match_step0": 0.4737,
+        "snapped_v_mae": 0.0644,
+        "snapped_w_mae": 0.0743
+      },
+      "ade": 0.1274,
+      "fde": 0.196,
+      "ade_oracle_commands": 0.0472,
+      "fde_oracle_commands": 0.0617,
+      "ade_hold_last_command": 0.2181,
+      "fde_hold_last_command": 0.4735,
+      "min_ade_k5": 0.1259,
+      "min_fde_k5": 0.1939,
+      "action": {
+        "accuracy": 0.7895,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 7,
+            "recall": 0.4286
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 1,
+            "recall": 1.0
+          }
+        }
+      },
+      "accuracy": 0.7895,
+      "text_cosine_model": 0.9595,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9081,
+      "text_retrieval_accuracy": 0.7895,
+      "text_retrieval_accuracy_covered": 0.7895,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 3,
+      "train_seconds": 14.3
+    },
+    {
+      "fold": 3,
+      "held_out": "scenario_3_run_02",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_03_scenario_3_run_02.json",
+      "n_train": 195,
+      "n_test": 16,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.02675,
+        "v": 4e-05,
+        "w": 4e-05,
+        "act": 6e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0664,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": -0.0804,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0487,
+      "frac_conflicting_over_training": 0.4233,
+      "pcgrad_projection_rate": 0.4043,
+      "velocity": {
+        "v": {
+          "mae": 0.1313,
+          "rmse": 0.2131,
+          "max_abs": 0.6863,
+          "r2": -0.3356,
+          "mae_per_step": [
+            0.0284,
+            0.0769,
+            0.1159,
+            0.1624,
+            0.2133,
+            0.1912
+          ]
+        },
+        "w": {
+          "mae": 0.1054,
+          "rmse": 0.15,
+          "max_abs": 0.4116,
+          "r2": 0.5041,
+          "mae_per_step": [
+            0.042,
+            0.0671,
+            0.1045,
+            0.1409,
+            0.1513,
+            0.1267
+          ]
+        },
+        "snapped_exact_match": 0.3021,
+        "snapped_exact_match_step0": 0.375,
+        "snapped_v_mae": 0.1094,
+        "snapped_w_mae": 0.083
+      },
+      "ade": 0.1383,
+      "fde": 0.2971,
+      "ade_oracle_commands": 0.0439,
+      "fde_oracle_commands": 0.0702,
+      "ade_hold_last_command": 0.1777,
+      "fde_hold_last_command": 0.3733,
+      "min_ade_k5": 0.1381,
+      "min_fde_k5": 0.2968,
+      "action": {
+        "accuracy": 1.0,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 4,
+            "recall": 1.0
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 1,
+            "recall": 1.0
+          }
+        }
+      },
+      "accuracy": 1.0,
+      "text_cosine_model": 0.998,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9185,
+      "text_retrieval_accuracy": 1.0,
+      "text_retrieval_accuracy_covered": 1.0,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 3,
+      "train_seconds": 16.4
+    },
+    {
+      "fold": 4,
+      "held_out": "scenario_4_run_03",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_04_scenario_4_run_03.json",
+      "n_train": 188,
+      "n_test": 23,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.02436,
+        "v": 2e-05,
+        "w": 3e-05,
+        "act": 5e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0009,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": 0.1075,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0439,
+      "frac_conflicting_over_training": 0.4067,
+      "pcgrad_projection_rate": 0.4061,
+      "velocity": {
+        "v": {
+          "mae": 0.0722,
+          "rmse": 0.1229,
+          "max_abs": 0.4631,
+          "r2": 0.3224,
+          "mae_per_step": [
+            0.0562,
+            0.0654,
+            0.0493,
+            0.0857,
+            0.067,
+            0.1098
+          ]
+        },
+        "w": {
+          "mae": 0.0787,
+          "rmse": 0.1334,
+          "max_abs": 0.4975,
+          "r2": 0.3635,
+          "mae_per_step": [
+            0.065,
+            0.07,
+            0.0616,
+            0.0899,
+            0.0678,
+            0.1179
+          ]
+        },
+        "snapped_exact_match": 0.2029,
+        "snapped_exact_match_step0": 0.1304,
+        "snapped_v_mae": 0.0367,
+        "snapped_w_mae": 0.0486
+      },
+      "ade": 0.0815,
+      "fde": 0.1578,
+      "ade_oracle_commands": 0.0215,
+      "fde_oracle_commands": 0.0355,
+      "ade_hold_last_command": 0.1147,
+      "fde_hold_last_command": 0.2411,
+      "min_ade_k5": 0.0805,
+      "min_fde_k5": 0.1549,
+      "action": {
+        "accuracy": 0.913,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 2,
+            "recall": 0.5
+          },
+          "RIGHT_TURN": {
+            "support": 21,
+            "recall": 0.9524
+          }
+        }
+      },
+      "accuracy": 0.913,
+      "text_cosine_model": 0.9791,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9754,
+      "text_retrieval_accuracy": 0.913,
+      "text_retrieval_accuracy_covered": 0.913,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 2,
+      "train_seconds": 15.7
+    },
+    {
+      "fold": 5,
+      "held_out": "scenario_5_run_02",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_05_scenario_5_run_02.json",
+      "n_train": 198,
+      "n_test": 13,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.01271,
+        "v": 4e-05,
+        "w": 4e-05,
+        "act": 5e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0186,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": 0.0156,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.039,
+      "frac_conflicting_over_training": 0.4033,
+      "pcgrad_projection_rate": 0.4229,
+      "velocity": {
+        "v": {
+          "mae": 0.1714,
+          "rmse": 0.2361,
+          "max_abs": 0.5379,
+          "r2": -0.7065,
+          "mae_per_step": [
+            0.1331,
+            0.1757,
+            0.1487,
+            0.1456,
+            0.1829,
+            0.2425
+          ]
+        },
+        "w": {
+          "mae": 0.2071,
+          "rmse": 0.2607,
+          "max_abs": 0.606,
+          "r2": -0.6242,
+          "mae_per_step": [
+            0.1829,
+            0.2104,
+            0.2021,
+            0.1901,
+            0.2257,
+            0.2317
+          ]
+        },
+        "snapped_exact_match": 0.0256,
+        "snapped_exact_match_step0": 0.0,
+        "snapped_v_mae": 0.1818,
+        "snapped_w_mae": 0.2136
+      },
+      "ade": 0.2378,
+      "fde": 0.4618,
+      "ade_oracle_commands": 0.0439,
+      "fde_oracle_commands": 0.0672,
+      "ade_hold_last_command": 0.1795,
+      "fde_hold_last_command": 0.3848,
+      "min_ade_k5": 0.2346,
+      "min_fde_k5": 0.4575,
+      "action": {
+        "accuracy": 0.6154,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 2,
+            "recall": 0.0
+          },
+          "RIGHT_TURN": {
+            "support": 11,
+            "recall": 0.7273
+          }
+        }
+      },
+      "accuracy": 0.6154,
+      "text_cosine_model": 0.9291,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.968,
+      "text_retrieval_accuracy": 0.6154,
+      "text_retrieval_accuracy_covered": 0.6154,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 2,
+      "train_seconds": 33.5
+    },
+    {
+      "fold": 6,
+      "held_out": "scenario_6_run_02",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_06_scenario_6_run_02.json",
+      "n_train": 198,
+      "n_test": 13,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.01875,
+        "v": 3e-05,
+        "w": 3e-05,
+        "act": 5e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0085,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": 0.1775,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0465,
+      "frac_conflicting_over_training": 0.3533,
+      "pcgrad_projection_rate": 0.3967,
+      "velocity": {
+        "v": {
+          "mae": 0.1317,
+          "rmse": 0.1708,
+          "max_abs": 0.3766,
+          "r2": 0.1804,
+          "mae_per_step": [
+            0.1013,
+            0.115,
+            0.1065,
+            0.1475,
+            0.1544,
+            0.1656
+          ]
+        },
+        "w": {
+          "mae": 0.14,
+          "rmse": 0.1659,
+          "max_abs": 0.3994,
+          "r2": 0.3903,
+          "mae_per_step": [
+            0.1367,
+            0.1431,
+            0.1079,
+            0.1312,
+            0.1766,
+            0.1444
+          ]
+        },
+        "snapped_exact_match": 0.2051,
+        "snapped_exact_match_step0": 0.0,
+        "snapped_v_mae": 0.1082,
+        "snapped_w_mae": 0.0883
+      },
+      "ade": 0.1556,
+      "fde": 0.2849,
+      "ade_oracle_commands": 0.0394,
+      "fde_oracle_commands": 0.0624,
+      "ade_hold_last_command": 0.1383,
+      "fde_hold_last_command": 0.3076,
+      "min_ade_k5": 0.1527,
+      "min_fde_k5": 0.2817,
+      "action": {
+        "accuracy": 0.7692,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 3,
+            "recall": 0.3333
+          },
+          "RIGHT_TURN": {
+            "support": 10,
+            "recall": 0.9
+          }
+        }
+      },
+      "accuracy": 0.7692,
+      "text_cosine_model": 0.9552,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9584,
+      "text_retrieval_accuracy": 0.7692,
+      "text_retrieval_accuracy_covered": 0.7692,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 2,
+      "train_seconds": 73.4
+    },
+    {
+      "fold": 7,
+      "held_out": "scenario_7_run_02",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_07_scenario_7_run_02.json",
+      "n_train": 189,
+      "n_test": 22,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.04213,
+        "v": 3e-05,
+        "w": 4e-05,
+        "act": 6e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0008,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": 0.2048,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.043,
+      "frac_conflicting_over_training": 0.43,
+      "pcgrad_projection_rate": 0.4061,
+      "velocity": {
+        "v": {
+          "mae": 0.1212,
+          "rmse": 0.1791,
+          "max_abs": 0.4758,
+          "r2": -2.4724,
+          "mae_per_step": [
+            0.087,
+            0.0983,
+            0.1055,
+            0.1392,
+            0.133,
+            0.1644
+          ]
+        },
+        "w": {
+          "mae": 0.1987,
+          "rmse": 0.2755,
+          "max_abs": 0.6056,
+          "r2": -2.4727,
+          "mae_per_step": [
+            0.1318,
+            0.1543,
+            0.1814,
+            0.2241,
+            0.2561,
+            0.2445
+          ]
+        },
+        "snapped_exact_match": 0.1061,
+        "snapped_exact_match_step0": 0.1818,
+        "snapped_v_mae": 0.1048,
+        "snapped_w_mae": 0.1686
+      },
+      "ade": 0.1606,
+      "fde": 0.3266,
+      "ade_oracle_commands": 0.0398,
+      "fde_oracle_commands": 0.0598,
+      "ade_hold_last_command": 0.0893,
+      "fde_hold_last_command": 0.1691,
+      "min_ade_k5": 0.1541,
+      "min_fde_k5": 0.3173,
+      "action": {
+        "accuracy": 0.7727,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 2,
+            "recall": 1.0
+          },
+          "RIGHT_TURN": {
+            "support": 19,
+            "recall": 0.7368
+          },
+          "STOP": {
+            "support": 1,
+            "recall": 1.0
+          }
+        }
+      },
+      "accuracy": 0.7727,
+      "text_cosine_model": 0.9508,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9483,
+      "text_retrieval_accuracy": 0.7727,
+      "text_retrieval_accuracy_covered": 0.7727,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 3,
+      "train_seconds": 24.3
+    },
+    {
+      "fold": 8,
+      "held_out": "scenario_8_run_03",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_08_scenario_8_run_03.json",
+      "n_train": 175,
+      "n_test": 36,
+      "latent_dim": 3,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.02323,
+        "v": 3e-05,
+        "w": 3e-05,
+        "act": 5e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": -0.0211,
+        "frac_conflicting_batches": 1.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": 0.1088,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0441,
+      "frac_conflicting_over_training": 0.3567,
+      "pcgrad_projection_rate": 0.3861,
+      "velocity": {
+        "v": {
+          "mae": 0.0842,
+          "rmse": 0.1269,
+          "max_abs": 0.4073,
+          "r2": 0.2282,
+          "mae_per_step": [
+            0.0845,
+            0.0693,
+            0.0731,
+            0.0873,
+            0.0985,
+            0.0927
+          ]
+        },
+        "w": {
+          "mae": 0.2299,
+          "rmse": 0.3253,
+          "max_abs": 0.7706,
+          "r2": 0.1785,
+          "mae_per_step": [
+            0.2102,
+            0.2288,
+            0.2278,
+            0.2337,
+            0.2516,
+            0.2271
+          ]
+        },
+        "snapped_exact_match": 0.1759,
+        "snapped_exact_match_step0": 0.0833,
+        "snapped_v_mae": 0.0752,
+        "snapped_w_mae": 0.2156
+      },
+      "ade": 0.0963,
+      "fde": 0.1593,
+      "ade_oracle_commands": 0.0405,
+      "fde_oracle_commands": 0.0621,
+      "ade_hold_last_command": 0.1284,
+      "fde_hold_last_command": 0.2686,
+      "min_ade_k5": 0.0957,
+      "min_fde_k5": 0.1583,
+      "action": {
+        "accuracy": 0.6111,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 6,
+            "recall": 0.5
+          },
+          "RIGHT_TURN": {
+            "support": 21,
+            "recall": 0.9048
+          },
+          "LEFT_TURN": {
+            "support": 9,
+            "recall": 0.0
+          }
+        }
+      },
+      "accuracy": 0.6111,
+      "text_cosine_model": 0.9504,
+      "text_cosine_pca_ceiling": 0.9978,
+      "text_cosine_mean_baseline": 0.9641,
+      "text_retrieval_accuracy": 0.5833,
+      "text_retrieval_accuracy_covered": 0.7778,
+      "text_bank_coverage": 0.75,
+      "text_bank_size": 4,
+      "text_n_unique_true": 3,
+      "train_seconds": 14.7
+    },
+    {
+      "fold": 9,
+      "held_out": "scenario_9_run_02",
+      "mode": {
+        "trunk": "shared",
+        "grad_mode": "pcgrad",
+        "p_sampled_z": 0.5,
+        "stage_a_frac": null
+      },
+      "stage2_model": "fold_09_scenario_9_run_02.json",
+      "n_train": 177,
+      "n_test": 34,
+      "latent_dim": 4,
+      "pca_explained": 1.0,
+      "train_loss": {
+        "flow": 0.02863,
+        "v": 2e-05,
+        "w": 3e-05,
+        "act": 6e-05
+      },
+      "epochs_stage_a": null,
+      "epochs_stage_b": null,
+      "grad_cosine_first_epoch": {
+        "grad_cosine_mean": 0.0734,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_last_epoch": {
+        "grad_cosine_mean": 0.0171,
+        "frac_conflicting_batches": 0.0,
+        "n_measured": 1
+      },
+      "grad_cosine_mean_over_training": 0.0259,
+      "frac_conflicting_over_training": 0.4833,
+      "pcgrad_projection_rate": 0.4194,
+      "velocity": {
+        "v": {
+          "mae": 0.0996,
+          "rmse": 0.1784,
+          "max_abs": 0.7917,
+          "r2": 0.0386,
+          "mae_per_step": [
+            0.0886,
+            0.1006,
+            0.1039,
+            0.1139,
+            0.1084,
+            0.082
+          ]
+        },
+        "w": {
+          "mae": 0.0966,
+          "rmse": 0.1678,
+          "max_abs": 0.5482,
+          "r2": 0.3174,
+          "mae_per_step": [
+            0.0974,
+            0.1068,
+            0.1115,
+            0.1212,
+            0.0889,
+            0.0542
+          ]
+        },
+        "snapped_exact_match": 0.2206,
+        "snapped_exact_match_step0": 0.2353,
+        "snapped_v_mae": 0.0805,
+        "snapped_w_mae": 0.0785
+      },
+      "ade": 0.1521,
+      "fde": 0.2673,
+      "ade_oracle_commands": 0.0417,
+      "fde_oracle_commands": 0.0569,
+      "ade_hold_last_command": 0.1691,
+      "fde_hold_last_command": 0.3762,
+      "min_ade_k5": 0.1513,
+      "min_fde_k5": 0.2662,
+      "action": {
+        "accuracy": 0.7941,
+        "per_class_recall": {
+          "FORWARD": {
+            "support": 12,
+            "recall": 0.4167
+          },
+          "RIGHT_TURN": {
+            "support": 21,
+            "recall": 1.0
+          },
+          "STOP": {
+            "support": 1,
+            "recall": 1.0
+          }
+        }
+      },
+      "accuracy": 0.7941,
+      "text_cosine_model": 0.9557,
+      "text_cosine_pca_ceiling": 1.0,
+      "text_cosine_mean_baseline": 0.9233,
+      "text_retrieval_accuracy": 0.7941,
+      "text_retrieval_accuracy_covered": 0.7941,
+      "text_bank_coverage": 1.0,
+      "text_bank_size": 5,
+      "text_n_unique_true": 3,
+      "train_seconds": 23.6
+    }
+  ]
+}

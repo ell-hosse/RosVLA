@@ -1,0 +1,4 @@
+numpy>=1.23
+# torch is optional: only used (if present) to read the *_data_splits.pt files
+# a few percent faster; data.py falls back to a pure-stdlib zip+pickle reader
+# (see data.py:_load_pt_dict) when torch is not installed.

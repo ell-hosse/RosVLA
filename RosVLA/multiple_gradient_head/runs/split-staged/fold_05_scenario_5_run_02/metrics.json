@@ -1,0 +1,90 @@
+{
+  "fold": 5,
+  "held_out": "scenario_5_run_02",
+  "mode": {
+    "trunk": "split",
+    "grad_mode": "staged",
+    "p_sampled_z": 1.0,
+    "stage_a_frac": 0.4
+  },
+  "stage2_model": "fold_05_scenario_5_run_02.json",
+  "n_train": 198,
+  "n_test": 13,
+  "latent_dim": 4,
+  "pca_explained": 1.0,
+  "train_loss": {
+    "flow": 0.04272,
+    "v": 0.00078,
+    "w": 0.00048,
+    "act": 0.0002
+  },
+  "epochs_stage_a": 120,
+  "epochs_stage_b": 180,
+  "stage_a_params": 959524,
+  "stage_b_params": 186673,
+  "velocity": {
+    "v": {
+      "mae": 0.1752,
+      "rmse": 0.233,
+      "max_abs": 0.4467,
+      "r2": -0.6621,
+      "mae_per_step": [
+        0.1389,
+        0.1667,
+        0.1578,
+        0.1661,
+        0.2034,
+        0.2183
+      ]
+    },
+    "w": {
+      "mae": 0.2086,
+      "rmse": 0.2619,
+      "max_abs": 0.5453,
+      "r2": -0.6391,
+      "mae_per_step": [
+        0.1759,
+        0.193,
+        0.2213,
+        0.1963,
+        0.2358,
+        0.2291
+      ]
+    },
+    "snapped_exact_match": 0.0513,
+    "snapped_exact_match_step0": 0.1538,
+    "snapped_v_mae": 0.18,
+    "snapped_w_mae": 0.2177
+  },
+  "ade": 0.2326,
+  "fde": 0.4475,
+  "ade_oracle_commands": 0.0439,
+  "fde_oracle_commands": 0.0672,
+  "ade_hold_last_command": 0.1795,
+  "fde_hold_last_command": 0.3848,
+  "min_ade_k5": 0.2251,
+  "min_fde_k5": 0.4368,
+  "action": {
+    "accuracy": 0.6154,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 2,
+        "recall": 0.0
+      },
+      "RIGHT_TURN": {
+        "support": 11,
+        "recall": 0.7273
+      }
+    }
+  },
+  "accuracy": 0.6154,
+  "text_cosine_model": 0.922,
+  "text_cosine_pca_ceiling": 1.0,
+  "text_cosine_mean_baseline": 0.968,
+  "text_retrieval_accuracy": 0.6154,
+  "text_retrieval_accuracy_covered": 0.6154,
+  "text_bank_coverage": 1.0,
+  "text_bank_size": 5,
+  "text_n_unique_true": 2,
+  "train_seconds": 9.8
+}

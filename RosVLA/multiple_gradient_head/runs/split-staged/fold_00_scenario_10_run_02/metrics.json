@@ -1,0 +1,98 @@
+{
+  "fold": 0,
+  "held_out": "scenario_10_run_02",
+  "mode": {
+    "trunk": "split",
+    "grad_mode": "staged",
+    "p_sampled_z": 1.0,
+    "stage_a_frac": 0.4
+  },
+  "stage2_model": "fold_00_scenario_10_run_02.json",
+  "n_train": 187,
+  "n_test": 24,
+  "latent_dim": 3,
+  "pca_explained": 1.0,
+  "train_loss": {
+    "flow": 0.05756,
+    "v": 0.00061,
+    "w": 0.00038,
+    "act": 0.0003
+  },
+  "epochs_stage_a": 120,
+  "epochs_stage_b": 180,
+  "stage_a_params": 959011,
+  "stage_b_params": 186417,
+  "velocity": {
+    "v": {
+      "mae": 0.2342,
+      "rmse": 0.3284,
+      "max_abs": 0.8141,
+      "r2": -0.7833,
+      "mae_per_step": [
+        0.1624,
+        0.2028,
+        0.2615,
+        0.2872,
+        0.2722,
+        0.2191
+      ]
+    },
+    "w": {
+      "mae": 0.3027,
+      "rmse": 0.4142,
+      "max_abs": 0.9857,
+      "r2": -0.1828,
+      "mae_per_step": [
+        0.2263,
+        0.2722,
+        0.3058,
+        0.3109,
+        0.3472,
+        0.3538
+      ]
+    },
+    "snapped_exact_match": 0.1597,
+    "snapped_exact_match_step0": 0.3333,
+    "snapped_v_mae": 0.2293,
+    "snapped_w_mae": 0.3184
+  },
+  "ade": 0.287,
+  "fde": 0.5502,
+  "ade_oracle_commands": 0.0396,
+  "fde_oracle_commands": 0.0509,
+  "ade_hold_last_command": 0.2044,
+  "fde_hold_last_command": 0.4317,
+  "min_ade_k5": 0.2801,
+  "min_fde_k5": 0.5373,
+  "action": {
+    "accuracy": 0.6667,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 5,
+        "recall": 1.0
+      },
+      "RIGHT_TURN": {
+        "support": 11,
+        "recall": 0.9091
+      },
+      "STOP": {
+        "support": 1,
+        "recall": 1.0
+      },
+      "REVERSE_LEFT": {
+        "support": 7,
+        "recall": 0.0
+      }
+    }
+  },
+  "accuracy": 0.6667,
+  "text_cosine_model": 0.8589,
+  "text_cosine_pca_ceiling": 0.884,
+  "text_cosine_mean_baseline": 0.8119,
+  "text_retrieval_accuracy": 0.6667,
+  "text_retrieval_accuracy_covered": 0.9412,
+  "text_bank_coverage": 0.7083,
+  "text_bank_size": 4,
+  "text_n_unique_true": 4,
+  "train_seconds": 8.4
+}

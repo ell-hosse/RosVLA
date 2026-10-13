@@ -1,0 +1,96 @@
+{
+  "fold": 0,
+  "held_out": "scenario_10_run_02",
+  "mode": {
+    "trunk": "split",
+    "grad_mode": "joint",
+    "p_sampled_z": 0.5,
+    "stage_a_frac": null
+  },
+  "stage2_model": "fold_00_scenario_10_run_02.json",
+  "n_train": 187,
+  "n_test": 24,
+  "latent_dim": 3,
+  "pca_explained": 1.0,
+  "train_loss": {
+    "flow": 0.02436,
+    "v": 1e-05,
+    "w": 1e-05,
+    "act": 5e-05
+  },
+  "epochs_stage_a": null,
+  "epochs_stage_b": null,
+  "velocity": {
+    "v": {
+      "mae": 0.2352,
+      "rmse": 0.3272,
+      "max_abs": 0.7787,
+      "r2": -0.7702,
+      "mae_per_step": [
+        0.167,
+        0.1962,
+        0.2624,
+        0.2821,
+        0.2715,
+        0.232
+      ]
+    },
+    "w": {
+      "mae": 0.2991,
+      "rmse": 0.4112,
+      "max_abs": 0.9206,
+      "r2": -0.1657,
+      "mae_per_step": [
+        0.234,
+        0.2727,
+        0.2918,
+        0.3174,
+        0.3437,
+        0.335
+      ]
+    },
+    "snapped_exact_match": 0.1458,
+    "snapped_exact_match_step0": 0.25,
+    "snapped_v_mae": 0.2319,
+    "snapped_w_mae": 0.3195
+  },
+  "ade": 0.2853,
+  "fde": 0.5482,
+  "ade_oracle_commands": 0.0396,
+  "fde_oracle_commands": 0.0509,
+  "ade_hold_last_command": 0.2044,
+  "fde_hold_last_command": 0.4317,
+  "min_ade_k5": 0.2841,
+  "min_fde_k5": 0.5458,
+  "action": {
+    "accuracy": 0.6667,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 5,
+        "recall": 1.0
+      },
+      "RIGHT_TURN": {
+        "support": 11,
+        "recall": 0.9091
+      },
+      "STOP": {
+        "support": 1,
+        "recall": 1.0
+      },
+      "REVERSE_LEFT": {
+        "support": 7,
+        "recall": 0.0
+      }
+    }
+  },
+  "accuracy": 0.6667,
+  "text_cosine_model": 0.8553,
+  "text_cosine_pca_ceiling": 0.884,
+  "text_cosine_mean_baseline": 0.8119,
+  "text_retrieval_accuracy": 0.6667,
+  "text_retrieval_accuracy_covered": 0.9412,
+  "text_bank_coverage": 0.7083,
+  "text_bank_size": 4,
+  "text_n_unique_true": 4,
+  "train_seconds": 15.4
+}

@@ -1,0 +1,705 @@
+{
+  "family": "wm",
+  "ablation": "c_vla_no_text",
+  "seed": 0,
+  "text_field": null,
+  "what_it_sees": {
+    "image": true,
+    "past_can_window": true,
+    "caption_into_head": "none"
+  },
+  "trajectory_is_produced_by": "differentiable kinematic rollout of predicted (a, kappa) + gated learned residual",
+  "model_size": {
+    "total_params": 328025,
+    "by_module": {
+      "vehicle_encoder": 17600,
+      "img_proj": 73856,
+      "action_head": 184076,
+      "residual_head": 52493
+    },
+    "size_fp32_mb": 1.312,
+    "size_fp16_mb": 0.656,
+    "note": "the frozen MobileNetV3-Small (0.93 M) and MiniLM encoders are not counted"
+  },
+  "dynamics_self_test": {
+    "n": 512,
+    "max_position_roundtrip_error_m": 7.105427357601002e-15,
+    "max_action_roundtrip_error": 2.609024107869118e-14,
+    "all_rows_valid": true,
+    "passed": true
+  },
+  "prior": "ctra",
+  "prior_requested": "auto",
+  "measured_kappa_r2_first_step": 0.9153,
+  "identified_steering_map": {
+    "fitted": true,
+    "equation": "kappa = deg2rad(steer_deg) / (L_eff * (1 + K_us * v^2))",
+    "L_eff_m": 37.2472,
+    "K_us": 0.00525,
+    "n_fit": 1636,
+    "r2": 0.9278
+  },
+  "dt_s": 0.5,
+  "n_steps": 6,
+  "horizon_s": 3.0,
+  "best_epoch": 1,
+  "history_log": [
+    {
+      "epoch": 0,
+      "val_ade": 0.6916888952255249,
+      "val_fde": 1.5966007709503174,
+      "pretrain": false,
+      "traj_loss": 0.25619443349148097
+    },
+    {
+      "epoch": 1,
+      "val_ade": 0.6082345843315125,
+      "val_fde": 1.3920332193374634,
+      "pretrain": false,
+      "traj_loss": 0.19473697480402494
+    },
+    {
+      "epoch": 2,
+      "val_ade": 0.613655149936676,
+      "val_fde": 1.3948637247085571,
+      "pretrain": false,
+      "traj_loss": 0.1743232296093514
+    },
+    {
+      "epoch": 3,
+      "val_ade": 0.6282569169998169,
+      "val_fde": 1.415817141532898,
+      "pretrain": false,
+      "traj_loss": 0.16098127612157873
+    },
+    {
+      "epoch": 4,
+      "val_ade": 0.6273794770240784,
+      "val_fde": 1.4265695810317993,
+      "pretrain": false,
+      "traj_loss": 0.1472219891454044
+    },
+    {
+      "epoch": 5,
+      "val_ade": 0.6409549713134766,
+      "val_fde": 1.4568088054656982,
+      "pretrain": false,
+      "traj_loss": 0.13650584181672648
+    },
+    {
+      "epoch": 6,
+      "val_ade": 0.6389660835266113,
+      "val_fde": 1.4615044593811035,
+      "pretrain": false,
+      "traj_loss": 0.12887023173664747
+    },
+    {
+      "epoch": 7,
+      "val_ade": 0.642577588558197,
+      "val_fde": 1.472943663597107,
+      "pretrain": false,
+      "traj_loss": 0.12071161540715318
+    },
+    {
+      "epoch": 8,
+      "val_ade": 0.6566107869148254,
+      "val_fde": 1.5016731023788452,
+      "pretrain": false,
+      "traj_loss": 0.11382887532052241
+    },
+    {
+      "epoch": 9,
+      "val_ade": 0.6485454440116882,
+      "val_fde": 1.4896663427352905,
+      "pretrain": false,
+      "traj_loss": 0.10514782290709646
+    },
+    {
+      "epoch": 10,
+      "val_ade": 0.6583709716796875,
+      "val_fde": 1.5112401247024536,
+      "pretrain": false,
+      "traj_loss": 0.09903869160303944
+    },
+    {
+      "epoch": 11,
+      "val_ade": 0.6599310040473938,
+      "val_fde": 1.5106550455093384,
+      "pretrain": false,
+      "traj_loss": 0.09492712507122442
+    },
+    {
+      "epoch": 12,
+      "val_ade": 0.6687394380569458,
+      "val_fde": 1.5248228311538696,
+      "pretrain": false,
+      "traj_loss": 0.08848916915686507
+    },
+    {
+      "epoch": 13,
+      "val_ade": 0.6714168787002563,
+      "val_fde": 1.5355489253997803,
+      "pretrain": false,
+      "traj_loss": 0.0835777084882322
+    },
+    {
+      "epoch": 14,
+      "val_ade": 0.66441810131073,
+      "val_fde": 1.5148251056671143,
+      "pretrain": false,
+      "traj_loss": 0.07967703338516385
+    },
+    {
+      "epoch": 15,
+      "val_ade": 0.6553472876548767,
+      "val_fde": 1.4956929683685303,
+      "pretrain": false,
+      "traj_loss": 0.07304946813536317
+    },
+    {
+      "epoch": 16,
+      "val_ade": 0.659999430179596,
+      "val_fde": 1.5109304189682007,
+      "pretrain": false,
+      "traj_loss": 0.06725079017250161
+    }
+  ],
+  "data": {
+    "rows_in_file": 4072,
+    "dropped_no_full_future": 544,
+    "dropped_no_can_window": 82,
+    "dropped_no_image": 0,
+    "usable": 3446,
+    "text_field": "caption",
+    "split_seed": 0,
+    "rows_train": 2429,
+    "scenes_train": 477,
+    "rows_val": 517,
+    "scenes_val": 102,
+    "rows_test": 500,
+    "scenes_test": 102
+  },
+  "baselines": {
+    "train": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0827,
+        "fde_m": 2.3838,
+        "l2": {
+          "stp3": {
+            "1s": 0.2553,
+            "2s": 0.5961,
+            "3s": 1.0827,
+            "avg": 0.6447
+          },
+          "uniad": {
+            "1s": 0.3701,
+            "2s": 1.1652,
+            "3s": 2.3838,
+            "avg": 1.3064
+          }
+        }
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.9007,
+        "fde_m": 2.0459,
+        "l2": {
+          "stp3": {
+            "1s": 0.2167,
+            "2s": 0.4823,
+            "3s": 0.9007,
+            "avg": 0.5332
+          },
+          "uniad": {
+            "1s": 0.3012,
+            "2s": 0.9355,
+            "3s": 2.0459,
+            "avg": 1.0942
+          }
+        }
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 0.9439,
+        "fde_m": 2.0953,
+        "l2": {
+          "stp3": {
+            "1s": 0.2288,
+            "2s": 0.5175,
+            "3s": 0.9439,
+            "avg": 0.5634
+          },
+          "uniad": {
+            "1s": 0.3264,
+            "2s": 1.0017,
+            "3s": 2.0953,
+            "avg": 1.1411
+          }
+        }
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 0.7718,
+        "fde_m": 1.8093,
+        "l2": {
+          "stp3": {
+            "1s": 0.1878,
+            "2s": 0.4009,
+            "3s": 0.7718,
+            "avg": 0.4535
+          },
+          "uniad": {
+            "1s": 0.2535,
+            "2s": 0.7721,
+            "3s": 1.8093,
+            "avg": 0.945
+          }
+        }
+      }
+    },
+    "val": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0251,
+        "fde_m": 2.2599,
+        "l2": {
+          "stp3": {
+            "1s": 0.2527,
+            "2s": 0.5676,
+            "3s": 1.0251,
+            "avg": 0.6151
+          },
+          "uniad": {
+            "1s": 0.3594,
+            "2s": 1.0905,
+            "3s": 2.2599,
+            "avg": 1.2366
+          }
+        }
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.8768,
+        "fde_m": 1.9741,
+        "l2": {
+          "stp3": {
+            "1s": 0.2227,
+            "2s": 0.477,
+            "3s": 0.8768,
+            "avg": 0.5255
+          },
+          "uniad": {
+            "1s": 0.3061,
+            "2s": 0.9067,
+            "3s": 1.9741,
+            "avg": 1.0623
+          }
+        }
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 0.8742,
+        "fde_m": 1.93,
+        "l2": {
+          "stp3": {
+            "1s": 0.2265,
+            "2s": 0.4862,
+            "3s": 0.8742,
+            "avg": 0.529
+          },
+          "uniad": {
+            "1s": 0.3159,
+            "2s": 0.917,
+            "3s": 1.93,
+            "avg": 1.0543
+          }
+        }
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 0.7419,
+        "fde_m": 1.7023,
+        "l2": {
+          "stp3": {
+            "1s": 0.1964,
+            "2s": 0.3979,
+            "3s": 0.7419,
+            "avg": 0.4454
+          },
+          "uniad": {
+            "1s": 0.262,
+            "2s": 0.7426,
+            "3s": 1.7023,
+            "avg": 0.9023
+          }
+        }
+      }
+    },
+    "test": {
+      "cv": {
+        "params": 0,
+        "ade_m": 0.8971,
+        "fde_m": 1.9547,
+        "l2": {
+          "stp3": {
+            "1s": 0.2199,
+            "2s": 0.5017,
+            "3s": 0.8971,
+            "avg": 0.5396
+          },
+          "uniad": {
+            "1s": 0.3161,
+            "2s": 0.9707,
+            "3s": 1.9547,
+            "avg": 1.0805
+          }
+        }
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.7874,
+        "fde_m": 1.7834,
+        "l2": {
+          "stp3": {
+            "1s": 0.1965,
+            "2s": 0.424,
+            "3s": 0.7874,
+            "avg": 0.4693
+          },
+          "uniad": {
+            "1s": 0.2737,
+            "2s": 0.8135,
+            "3s": 1.7834,
+            "avg": 0.9569
+          }
+        }
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 0.7975,
+        "fde_m": 1.747,
+        "l2": {
+          "stp3": {
+            "1s": 0.2008,
+            "2s": 0.4452,
+            "3s": 0.7975,
+            "avg": 0.4812
+          },
+          "uniad": {
+            "1s": 0.2852,
+            "2s": 0.8547,
+            "3s": 1.747,
+            "avg": 0.9623
+          }
+        }
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 0.6986,
+        "fde_m": 1.62,
+        "l2": {
+          "stp3": {
+            "1s": 0.1768,
+            "2s": 0.3682,
+            "3s": 0.6986,
+            "avg": 0.4145
+          },
+          "uniad": {
+            "1s": 0.2412,
+            "2s": 0.7011,
+            "3s": 1.62,
+            "avg": 0.8541
+          }
+        }
+      }
+    }
+  },
+  "oracle_actions": {
+    "train": {
+      "exact": {
+        "ade_m": 0.000653
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.0064,
+        "fde_m": 0.0123,
+        "note": "best ADE reachable by ANY model with |a|<=8.0, |kappa|<=0.25"
+      }
+    },
+    "val": {
+      "exact": {
+        "ade_m": 0.000502
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.001,
+        "fde_m": 0.0018,
+        "note": "best ADE reachable by ANY model with |a|<=8.0, |kappa|<=0.25"
+      }
+    },
+    "test": {
+      "exact": {
+        "ade_m": 0.000778
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.0015,
+        "fde_m": 0.0028,
+        "note": "best ADE reachable by ANY model with |a|<=8.0, |kappa|<=0.25"
+      }
+    }
+  },
+  "train": {
+    "n": 2429,
+    "ade_m": 0.5806,
+    "fde_m": 1.3684,
+    "ade_median_m": 0.4391,
+    "fde_p90_m": 3.1267,
+    "per_step_displacement_m": [
+      0.0963,
+      0.1921,
+      0.3385,
+      0.5746,
+      0.914,
+      1.3684
+    ],
+    "per_step_time_s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "l2": {
+      "stp3": {
+        "1s": 0.1442,
+        "2s": 0.3004,
+        "3s": 0.5806,
+        "avg": 0.3417
+      },
+      "uniad": {
+        "1s": 0.1921,
+        "2s": 0.5746,
+        "3s": 1.3684,
+        "avg": 0.7117
+      }
+    },
+    "subgroups": {
+      "location=boston-seaport": {
+        "n": 1330,
+        "ade_m": 0.5133
+      },
+      "location=singapore-hollandvillage": {
+        "n": 263,
+        "ade_m": 0.7243
+      },
+      "location=singapore-onenorth": {
+        "n": 541,
+        "ade_m": 0.5588
+      },
+      "location=singapore-queenstown": {
+        "n": 295,
+        "ade_m": 0.7962
+      },
+      "history_edge_padded=True": {
+        "n": 412,
+        "ade_m": 0.5881
+      },
+      "history_edge_padded=False": {
+        "n": 2017,
+        "ade_m": 0.5791
+      }
+    },
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.061,
+        "std": 0.483,
+        "p01": -1.3763,
+        "p99": 1.0882,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.000142,
+        "std": 0.025359,
+        "p01": -0.096005,
+        "p99": 0.097725,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1058,
+      "residual": {
+        "mean_abs_m": 0.0045,
+        "final_step_mean_abs_m": 0.0042,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  },
+  "val": {
+    "n": 517,
+    "ade_m": 0.6082,
+    "fde_m": 1.392,
+    "ade_median_m": 0.4899,
+    "fde_p90_m": 2.9626,
+    "per_step_displacement_m": [
+      0.1107,
+      0.215,
+      0.3758,
+      0.6104,
+      0.9455,
+      1.392
+    ],
+    "per_step_time_s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "l2": {
+      "stp3": {
+        "1s": 0.1629,
+        "2s": 0.328,
+        "3s": 0.6082,
+        "avg": 0.3664
+      },
+      "uniad": {
+        "1s": 0.215,
+        "2s": 0.6104,
+        "3s": 1.392,
+        "avg": 0.7391
+      }
+    },
+    "subgroups": {
+      "location=boston-seaport": {
+        "n": 300,
+        "ade_m": 0.5185
+      },
+      "location=singapore-hollandvillage": {
+        "n": 37,
+        "ade_m": 0.7312
+      },
+      "location=singapore-onenorth": {
+        "n": 88,
+        "ade_m": 0.6871
+      },
+      "location=singapore-queenstown": {
+        "n": 92,
+        "ade_m": 0.7759
+      },
+      "history_edge_padded=True": {
+        "n": 98,
+        "ade_m": 0.6034
+      },
+      "history_edge_padded=False": {
+        "n": 419,
+        "ade_m": 0.6094
+      }
+    },
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.0061,
+        "std": 0.4174,
+        "p01": -1.0624,
+        "p99": 1.0853,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.001835,
+        "std": 0.025009,
+        "p01": -0.108433,
+        "p99": 0.080517,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1071,
+      "residual": {
+        "mean_abs_m": 0.0044,
+        "final_step_mean_abs_m": 0.0038,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  },
+  "test": {
+    "n": 500,
+    "ade_m": 0.5401,
+    "fde_m": 1.2564,
+    "ade_median_m": 0.4349,
+    "fde_p90_m": 2.8961,
+    "per_step_displacement_m": [
+      0.0875,
+      0.1808,
+      0.321,
+      0.5451,
+      0.85,
+      1.2564
+    ],
+    "per_step_time_s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "l2": {
+      "stp3": {
+        "1s": 0.1341,
+        "2s": 0.2836,
+        "3s": 0.5401,
+        "avg": 0.3193
+      },
+      "uniad": {
+        "1s": 0.1808,
+        "2s": 0.5451,
+        "3s": 1.2564,
+        "avg": 0.6608
+      }
+    },
+    "subgroups": {
+      "location=boston-seaport": {
+        "n": 286,
+        "ade_m": 0.4122
+      },
+      "location=singapore-hollandvillage": {
+        "n": 51,
+        "ade_m": 0.7189
+      },
+      "location=singapore-onenorth": {
+        "n": 105,
+        "ade_m": 0.6888
+      },
+      "location=singapore-queenstown": {
+        "n": 58,
+        "ade_m": 0.745
+      },
+      "history_edge_padded=True": {
+        "n": 95,
+        "ade_m": 0.5479
+      },
+      "history_edge_padded=False": {
+        "n": 405,
+        "ade_m": 0.5383
+      }
+    },
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.0514,
+        "std": 0.4319,
+        "p01": -1.1179,
+        "p99": 1.0883,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.001438,
+        "std": 0.019348,
+        "p01": -0.093186,
+        "p99": 0.068261,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1064,
+      "residual": {
+        "mean_abs_m": 0.0045,
+        "final_step_mean_abs_m": 0.004,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "fold": 1,
+  "held_out": "scenario_1_run_03",
+  "n_train": 308,
+  "n_test": 23,
+  "ade": 0.1829,
+  "fde": 0.2751,
+  "accuracy": 0.6087,
+  "action": {
+    "accuracy": 0.6087,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 9,
+        "recall": 0.3333
+      },
+      "RIGHT_TURN": {
+        "support": 10,
+        "recall": 1.0
+      },
+      "STOP": {
+        "support": 4,
+        "recall": 0.25
+      }
+    }
+  },
+  "train_seconds": 7.1
+}

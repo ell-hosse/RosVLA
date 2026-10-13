@@ -1,0 +1,94 @@
+{
+  "fold": 8,
+  "held_out": "scenario_8_run_03",
+  "mode": {
+    "trunk": "shared",
+    "grad_mode": "staged",
+    "p_sampled_z": 1.0,
+    "stage_a_frac": 0.4
+  },
+  "stage2_model": "fold_08_scenario_8_run_03.json",
+  "n_train": 175,
+  "n_test": 36,
+  "latent_dim": 3,
+  "pca_explained": 1.0,
+  "train_loss": {
+    "flow": 0.07144,
+    "v": 0.01432,
+    "w": 0.01039,
+    "act": 0.0014
+  },
+  "epochs_stage_a": 120,
+  "epochs_stage_b": 180,
+  "stage_a_params": 959011,
+  "stage_b_params": 112145,
+  "velocity": {
+    "v": {
+      "mae": 0.0941,
+      "rmse": 0.1393,
+      "max_abs": 0.431,
+      "r2": 0.0704,
+      "mae_per_step": [
+        0.087,
+        0.0708,
+        0.0747,
+        0.0812,
+        0.1175,
+        0.1337
+      ]
+    },
+    "w": {
+      "mae": 0.2804,
+      "rmse": 0.4052,
+      "max_abs": 0.9997,
+      "r2": -0.2745,
+      "mae_per_step": [
+        0.26,
+        0.2716,
+        0.277,
+        0.3197,
+        0.2705,
+        0.2834
+      ]
+    },
+    "snapped_exact_match": 0.1296,
+    "snapped_exact_match_step0": 0.1389,
+    "snapped_v_mae": 0.063,
+    "snapped_w_mae": 0.2639
+  },
+  "ade": 0.0937,
+  "fde": 0.1582,
+  "ade_oracle_commands": 0.0405,
+  "fde_oracle_commands": 0.0621,
+  "ade_hold_last_command": 0.1284,
+  "fde_hold_last_command": 0.2686,
+  "min_ade_k5": 0.0922,
+  "min_fde_k5": 0.1531,
+  "action": {
+    "accuracy": 0.5833,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 6,
+        "recall": 0.5
+      },
+      "RIGHT_TURN": {
+        "support": 21,
+        "recall": 0.8571
+      },
+      "LEFT_TURN": {
+        "support": 9,
+        "recall": 0.0
+      }
+    }
+  },
+  "accuracy": 0.5833,
+  "text_cosine_model": 0.9592,
+  "text_cosine_pca_ceiling": 0.9978,
+  "text_cosine_mean_baseline": 0.9641,
+  "text_retrieval_accuracy": 0.6111,
+  "text_retrieval_accuracy_covered": 0.8148,
+  "text_bank_coverage": 0.75,
+  "text_bank_size": 4,
+  "text_n_unique_true": 3,
+  "train_seconds": 7.6
+}

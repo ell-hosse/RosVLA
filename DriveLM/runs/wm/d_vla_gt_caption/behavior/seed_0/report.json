@@ -1,0 +1,910 @@
+{
+  "family": "wm",
+  "ablation": "d_vla_gt_caption",
+  "seed": 0,
+  "text_field": "behavior",
+  "what_it_sees": {
+    "image": true,
+    "past_can_window": true,
+    "caption_into_head": "ground truth (oracle)"
+  },
+  "trajectory_is_produced_by": "differentiable kinematic rollout of predicted (a, kappa) + gated learned residual",
+  "model_size": {
+    "total_params": 1520493,
+    "by_module": {
+      "vehicle_encoder": 17600,
+      "img_proj": 73856,
+      "flow": 1182228,
+      "action_head": 189196,
+      "residual_head": 57613
+    },
+    "size_fp32_mb": 6.082,
+    "size_fp16_mb": 3.041,
+    "note": "the frozen MobileNetV3-Small (0.93 M) and MiniLM encoders are not counted",
+    "flow_per_step_params": 606484,
+    "flow_hoisted_params": 575744
+  },
+  "dynamics_self_test": {
+    "n": 512,
+    "max_position_roundtrip_error_m": 7.105427357601002e-15,
+    "max_action_roundtrip_error": 2.609024107869118e-14,
+    "all_rows_valid": true,
+    "passed": true
+  },
+  "prior": "ctra",
+  "prior_requested": "auto",
+  "measured_kappa_r2_first_step": 0.9153,
+  "identified_steering_map": {
+    "fitted": true,
+    "equation": "kappa = deg2rad(steer_deg) / (L_eff * (1 + K_us * v^2))",
+    "L_eff_m": 37.2472,
+    "K_us": 0.00525,
+    "n_fit": 1636,
+    "r2": 0.9278
+  },
+  "dt_s": 0.5,
+  "n_steps": 6,
+  "horizon_s": 3.0,
+  "best_epoch": 7,
+  "history_log": [
+    {
+      "epoch": 0,
+      "val_ade": 0.7127251625061035,
+      "val_fde": 1.639009952545166,
+      "pretrain": false,
+      "flow_loss": 1.498112628334447,
+      "traj_loss": 0.2569468488034449
+    },
+    {
+      "epoch": 1,
+      "val_ade": 0.6019405722618103,
+      "val_fde": 1.3587346076965332,
+      "pretrain": false,
+      "flow_loss": 1.1271789889586599,
+      "traj_loss": 0.20675754978468544
+    },
+    {
+      "epoch": 2,
+      "val_ade": 0.5579907894134521,
+      "val_fde": 1.2548916339874268,
+      "pretrain": false,
+      "flow_loss": 0.9511730796412418,
+      "traj_loss": 0.15877100080251694
+    },
+    {
+      "epoch": 3,
+      "val_ade": 0.5559661984443665,
+      "val_fde": 1.2375035285949707,
+      "pretrain": false,
+      "flow_loss": 0.8254794164707786,
+      "traj_loss": 0.1400180666854507
+    },
+    {
+      "epoch": 4,
+      "val_ade": 0.5213841795921326,
+      "val_fde": 1.1526280641555786,
+      "pretrain": false,
+      "flow_loss": 0.7538142737589384,
+      "traj_loss": 0.12553249809302783
+    },
+    {
+      "epoch": 5,
+      "val_ade": 0.5179889798164368,
+      "val_fde": 1.149590253829956,
+      "pretrain": false,
+      "flow_loss": 0.6795582551705209,
+      "traj_loss": 0.11499802572162528
+    },
+    {
+      "epoch": 6,
+      "val_ade": 0.536554217338562,
+      "val_fde": 1.194878339767456,
+      "pretrain": false,
+      "flow_loss": 0.6379253872131047,
+      "traj_loss": 0.105830829590559
+    },
+    {
+      "epoch": 7,
+      "val_ade": 0.5143214464187622,
+      "val_fde": 1.137244462966919,
+      "pretrain": false,
+      "flow_loss": 0.5932741078891253,
+      "traj_loss": 0.09601242310906712
+    },
+    {
+      "epoch": 8,
+      "val_ade": 0.5359057188034058,
+      "val_fde": 1.1859676837921143,
+      "pretrain": false,
+      "flow_loss": 0.5574677641454496,
+      "traj_loss": 0.08838261242367719
+    },
+    {
+      "epoch": 9,
+      "val_ade": 0.5300962924957275,
+      "val_fde": 1.1771323680877686,
+      "pretrain": false,
+      "flow_loss": 0.5379332107932944,
+      "traj_loss": 0.08273550270027236
+    },
+    {
+      "epoch": 10,
+      "val_ade": 0.5297461748123169,
+      "val_fde": 1.1724499464035034,
+      "pretrain": false,
+      "flow_loss": 0.4974623110733534,
+      "traj_loss": 0.07685214751645138
+    },
+    {
+      "epoch": 11,
+      "val_ade": 0.5336646437644958,
+      "val_fde": 1.1791170835494995,
+      "pretrain": false,
+      "flow_loss": 0.4866023573436235,
+      "traj_loss": 0.07286754623055458
+    },
+    {
+      "epoch": 12,
+      "val_ade": 0.5476681590080261,
+      "val_fde": 1.2252616882324219,
+      "pretrain": false,
+      "flow_loss": 0.4595549475205572,
+      "traj_loss": 0.06738606948209436
+    },
+    {
+      "epoch": 13,
+      "val_ade": 0.5461990237236023,
+      "val_fde": 1.2015058994293213,
+      "pretrain": false,
+      "flow_loss": 0.44550260979878276,
+      "traj_loss": 0.06344719162504923
+    },
+    {
+      "epoch": 14,
+      "val_ade": 0.5423389077186584,
+      "val_fde": 1.206397294998169,
+      "pretrain": false,
+      "flow_loss": 0.41976887850384964,
+      "traj_loss": 0.05910647993809298
+    },
+    {
+      "epoch": 15,
+      "val_ade": 0.5375979542732239,
+      "val_fde": 1.1884695291519165,
+      "pretrain": false,
+      "flow_loss": 0.3994028191817434,
+      "traj_loss": 0.05437051014680611
+    },
+    {
+      "epoch": 16,
+      "val_ade": 0.5389094948768616,
+      "val_fde": 1.1877964735031128,
+      "pretrain": false,
+      "flow_loss": 0.3889791573348798,
+      "traj_loss": 0.053286231073894
+    },
+    {
+      "epoch": 17,
+      "val_ade": 0.532167911529541,
+      "val_fde": 1.1667386293411255,
+      "pretrain": false,
+      "flow_loss": 0.36945333567104843,
+      "traj_loss": 0.04915597260390457
+    },
+    {
+      "epoch": 18,
+      "val_ade": 0.55576092004776,
+      "val_fde": 1.2229185104370117,
+      "pretrain": false,
+      "flow_loss": 0.3592560267762134,
+      "traj_loss": 0.048054077025306854
+    },
+    {
+      "epoch": 19,
+      "val_ade": 0.5422225594520569,
+      "val_fde": 1.2001649141311646,
+      "pretrain": false,
+      "flow_loss": 0.3451112151930207,
+      "traj_loss": 0.04286285676062107
+    },
+    {
+      "epoch": 20,
+      "val_ade": 0.5472133755683899,
+      "val_fde": 1.2030659914016724,
+      "pretrain": false,
+      "flow_loss": 0.3289696801649897,
+      "traj_loss": 0.039327096439113744
+    },
+    {
+      "epoch": 21,
+      "val_ade": 0.5447936058044434,
+      "val_fde": 1.2025485038757324,
+      "pretrain": false,
+      "flow_loss": 0.3199721841435683,
+      "traj_loss": 0.038434265622575035
+    },
+    {
+      "epoch": 22,
+      "val_ade": 0.5510640144348145,
+      "val_fde": 1.2121204137802124,
+      "pretrain": false,
+      "flow_loss": 0.3172512646568449,
+      "traj_loss": 0.03840807629259009
+    }
+  ],
+  "data": {
+    "rows_in_file": 4072,
+    "dropped_no_full_future": 544,
+    "dropped_no_can_window": 82,
+    "dropped_no_image": 0,
+    "usable": 3446,
+    "text_field": "behavior",
+    "split_seed": 0,
+    "rows_train": 2429,
+    "scenes_train": 477,
+    "rows_val": 517,
+    "scenes_val": 102,
+    "rows_test": 500,
+    "scenes_test": 102
+  },
+  "baselines": {
+    "train": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0827,
+        "fde_m": 2.3838,
+        "l2": {
+          "stp3": {
+            "1s": 0.2553,
+            "2s": 0.5961,
+            "3s": 1.0827,
+            "avg": 0.6447
+          },
+          "uniad": {
+            "1s": 0.3701,
+            "2s": 1.1652,
+            "3s": 2.3838,
+            "avg": 1.3064
+          }
+        }
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.9007,
+        "fde_m": 2.0459,
+        "l2": {
+          "stp3": {
+            "1s": 0.2167,
+            "2s": 0.4823,
+            "3s": 0.9007,
+            "avg": 0.5332
+          },
+          "uniad": {
+            "1s": 0.3012,
+            "2s": 0.9355,
+            "3s": 2.0459,
+            "avg": 1.0942
+          }
+        }
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 0.9439,
+        "fde_m": 2.0953,
+        "l2": {
+          "stp3": {
+            "1s": 0.2288,
+            "2s": 0.5175,
+            "3s": 0.9439,
+            "avg": 0.5634
+          },
+          "uniad": {
+            "1s": 0.3264,
+            "2s": 1.0017,
+            "3s": 2.0953,
+            "avg": 1.1411
+          }
+        }
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 0.7718,
+        "fde_m": 1.8093,
+        "l2": {
+          "stp3": {
+            "1s": 0.1878,
+            "2s": 0.4009,
+            "3s": 0.7718,
+            "avg": 0.4535
+          },
+          "uniad": {
+            "1s": 0.2535,
+            "2s": 0.7721,
+            "3s": 1.8093,
+            "avg": 0.945
+          }
+        }
+      }
+    },
+    "val": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0251,
+        "fde_m": 2.2599,
+        "l2": {
+          "stp3": {
+            "1s": 0.2527,
+            "2s": 0.5676,
+            "3s": 1.0251,
+            "avg": 0.6151
+          },
+          "uniad": {
+            "1s": 0.3594,
+            "2s": 1.0905,
+            "3s": 2.2599,
+            "avg": 1.2366
+          }
+        }
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.8768,
+        "fde_m": 1.9741,
+        "l2": {
+          "stp3": {
+            "1s": 0.2227,
+            "2s": 0.477,
+            "3s": 0.8768,
+            "avg": 0.5255
+          },
+          "uniad": {
+            "1s": 0.3061,
+            "2s": 0.9067,
+            "3s": 1.9741,
+            "avg": 1.0623
+          }
+        }
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 0.8742,
+        "fde_m": 1.93,
+        "l2": {
+          "stp3": {
+            "1s": 0.2265,
+            "2s": 0.4862,
+            "3s": 0.8742,
+            "avg": 0.529
+          },
+          "uniad": {
+            "1s": 0.3159,
+            "2s": 0.917,
+            "3s": 1.93,
+            "avg": 1.0543
+          }
+        }
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 0.7419,
+        "fde_m": 1.7023,
+        "l2": {
+          "stp3": {
+            "1s": 0.1964,
+            "2s": 0.3979,
+            "3s": 0.7419,
+            "avg": 0.4454
+          },
+          "uniad": {
+            "1s": 0.262,
+            "2s": 0.7426,
+            "3s": 1.7023,
+            "avg": 0.9023
+          }
+        }
+      }
+    },
+    "test": {
+      "cv": {
+        "params": 0,
+        "ade_m": 0.8971,
+        "fde_m": 1.9547,
+        "l2": {
+          "stp3": {
+            "1s": 0.2199,
+            "2s": 0.5017,
+            "3s": 0.8971,
+            "avg": 0.5396
+          },
+          "uniad": {
+            "1s": 0.3161,
+            "2s": 0.9707,
+            "3s": 1.9547,
+            "avg": 1.0805
+          }
+        }
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.7874,
+        "fde_m": 1.7834,
+        "l2": {
+          "stp3": {
+            "1s": 0.1965,
+            "2s": 0.424,
+            "3s": 0.7874,
+            "avg": 0.4693
+          },
+          "uniad": {
+            "1s": 0.2737,
+            "2s": 0.8135,
+            "3s": 1.7834,
+            "avg": 0.9569
+          }
+        }
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 0.7975,
+        "fde_m": 1.747,
+        "l2": {
+          "stp3": {
+            "1s": 0.2008,
+            "2s": 0.4452,
+            "3s": 0.7975,
+            "avg": 0.4812
+          },
+          "uniad": {
+            "1s": 0.2852,
+            "2s": 0.8547,
+            "3s": 1.747,
+            "avg": 0.9623
+          }
+        }
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 0.6986,
+        "fde_m": 1.62,
+        "l2": {
+          "stp3": {
+            "1s": 0.1768,
+            "2s": 0.3682,
+            "3s": 0.6986,
+            "avg": 0.4145
+          },
+          "uniad": {
+            "1s": 0.2412,
+            "2s": 0.7011,
+            "3s": 1.62,
+            "avg": 0.8541
+          }
+        }
+      }
+    }
+  },
+  "oracle_actions": {
+    "train": {
+      "exact": {
+        "ade_m": 0.000653
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.0064,
+        "fde_m": 0.0123,
+        "note": "best ADE reachable by ANY model with |a|<=8.0, |kappa|<=0.25"
+      }
+    },
+    "val": {
+      "exact": {
+        "ade_m": 0.000502
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.001,
+        "fde_m": 0.0018,
+        "note": "best ADE reachable by ANY model with |a|<=8.0, |kappa|<=0.25"
+      }
+    },
+    "test": {
+      "exact": {
+        "ade_m": 0.000778
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.0015,
+        "fde_m": 0.0028,
+        "note": "best ADE reachable by ANY model with |a|<=8.0, |kappa|<=0.25"
+      }
+    }
+  },
+  "pca": {
+    "latent_dim": 20,
+    "n_unique_train_texts": 21,
+    "explained_variance_ratio_cumulative_train": 1.0,
+    "explained_variance_ratio_per_component": [
+      0.52225,
+      0.14332,
+      0.10277,
+      0.08816,
+      0.06164,
+      0.05641,
+      0.01631,
+      0.00329,
+      0.00239,
+      0.00102,
+      0.00075,
+      0.00044,
+      0.00041,
+      0.00028,
+      0.00022,
+      0.00016,
+      0.00011,
+      3e-05,
+      2e-05,
+      1e-05
+    ],
+    "train": {
+      "n": 2429,
+      "n_unique": 21,
+      "reconstruction_mse": 0.0,
+      "reconstruction_cosine": 1.0
+    },
+    "val": {
+      "n": 517,
+      "n_unique": 21,
+      "reconstruction_mse": 0.0,
+      "reconstruction_cosine": 1.0
+    },
+    "test": {
+      "n": 500,
+      "n_unique": 21,
+      "reconstruction_mse": 0.0,
+      "reconstruction_cosine": 1.0
+    }
+  },
+  "train": {
+    "n": 2429,
+    "ade_m": 0.3812,
+    "fde_m": 0.8434,
+    "ade_median_m": 0.3115,
+    "fde_p90_m": 1.8448,
+    "per_step_displacement_m": [
+      0.091,
+      0.1638,
+      0.2491,
+      0.374,
+      0.5661,
+      0.8434
+    ],
+    "per_step_time_s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "l2": {
+      "stp3": {
+        "1s": 0.1274,
+        "2s": 0.2195,
+        "3s": 0.3812,
+        "avg": 0.2427
+      },
+      "uniad": {
+        "1s": 0.1638,
+        "2s": 0.374,
+        "3s": 0.8434,
+        "avg": 0.4604
+      }
+    },
+    "subgroups": {
+      "location=boston-seaport": {
+        "n": 1330,
+        "ade_m": 0.3507
+      },
+      "location=singapore-hollandvillage": {
+        "n": 263,
+        "ade_m": 0.4655
+      },
+      "location=singapore-onenorth": {
+        "n": 541,
+        "ade_m": 0.3796
+      },
+      "location=singapore-queenstown": {
+        "n": 295,
+        "ade_m": 0.4469
+      },
+      "history_edge_padded=True": {
+        "n": 412,
+        "ade_m": 0.3825
+      },
+      "history_edge_padded=False": {
+        "n": 2017,
+        "ade_m": 0.381
+      }
+    },
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1133,
+        "std": 0.521,
+        "p01": -1.4367,
+        "p99": 1.1374,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -2.1e-05,
+        "std": 0.019945,
+        "p01": -0.074236,
+        "p99": 0.076637,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1402,
+      "residual": {
+        "mean_abs_m": 0.0626,
+        "final_step_mean_abs_m": 0.1036,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    },
+    "text": {
+      "n": 2429,
+      "cosine_model": 0.9693,
+      "cosine_pca_ceiling": 1.0,
+      "cosine_mean_baseline": 0.9571,
+      "scaled_score": 0.2837,
+      "retrieval": {
+        "bank_size": 21,
+        "retrieval_accuracy": 0.4891,
+        "retrieval_accuracy_covered": 0.4891,
+        "bank_coverage": 1.0,
+        "behavior_accuracy": 0.4891,
+        "behavior_speed_accuracy": 0.6118,
+        "behavior_steer_accuracy": 0.7633
+      },
+      "behavior_majority_baseline": {
+        "majority_behavior": "The ego vehicle is going straight. The ego vehicle is not moving.",
+        "behavior_accuracy": 0.2223,
+        "behavior_speed_accuracy": 0.2223,
+        "behavior_steer_accuracy": 0.7752
+      }
+    }
+  },
+  "val": {
+    "n": 517,
+    "ade_m": 0.5143,
+    "fde_m": 1.1372,
+    "ade_median_m": 0.444,
+    "fde_p90_m": 2.4463,
+    "per_step_displacement_m": [
+      0.1075,
+      0.2048,
+      0.335,
+      0.52,
+      0.7814,
+      1.1372
+    ],
+    "per_step_time_s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "l2": {
+      "stp3": {
+        "1s": 0.1561,
+        "2s": 0.2918,
+        "3s": 0.5143,
+        "avg": 0.3207
+      },
+      "uniad": {
+        "1s": 0.2048,
+        "2s": 0.52,
+        "3s": 1.1372,
+        "avg": 0.6207
+      }
+    },
+    "subgroups": {
+      "location=boston-seaport": {
+        "n": 300,
+        "ade_m": 0.442
+      },
+      "location=singapore-hollandvillage": {
+        "n": 37,
+        "ade_m": 0.6267
+      },
+      "location=singapore-onenorth": {
+        "n": 88,
+        "ade_m": 0.6161
+      },
+      "location=singapore-queenstown": {
+        "n": 92,
+        "ade_m": 0.6076
+      },
+      "history_edge_padded=True": {
+        "n": 98,
+        "ade_m": 0.4877
+      },
+      "history_edge_padded=False": {
+        "n": 419,
+        "ade_m": 0.5206
+      }
+    },
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.068,
+        "std": 0.4519,
+        "p01": -1.2809,
+        "p99": 1.0375,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.001809,
+        "std": 0.019982,
+        "p01": -0.090765,
+        "p99": 0.060658,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1331,
+      "residual": {
+        "mean_abs_m": 0.0635,
+        "final_step_mean_abs_m": 0.0908,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    },
+    "text": {
+      "n": 517,
+      "cosine_model": 0.9636,
+      "cosine_pca_ceiling": 1.0,
+      "cosine_mean_baseline": 0.9596,
+      "scaled_score": 0.0989,
+      "retrieval": {
+        "bank_size": 21,
+        "retrieval_accuracy": 0.4449,
+        "retrieval_accuracy_covered": 0.4449,
+        "bank_coverage": 1.0,
+        "behavior_accuracy": 0.4449,
+        "behavior_speed_accuracy": 0.6112,
+        "behavior_steer_accuracy": 0.6925
+      },
+      "behavior_majority_baseline": {
+        "majority_behavior": "The ego vehicle is going straight. The ego vehicle is not moving.",
+        "behavior_accuracy": 0.1528,
+        "behavior_speed_accuracy": 0.1528,
+        "behavior_steer_accuracy": 0.766
+      }
+    }
+  },
+  "test": {
+    "n": 500,
+    "ade_m": 0.4581,
+    "fde_m": 1.0512,
+    "ade_median_m": 0.3855,
+    "fde_p90_m": 2.3712,
+    "per_step_displacement_m": [
+      0.0838,
+      0.1707,
+      0.282,
+      0.4554,
+      0.7059,
+      1.0512
+    ],
+    "per_step_time_s": [
+      0.5,
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0
+    ],
+    "l2": {
+      "stp3": {
+        "1s": 0.1272,
+        "2s": 0.2479,
+        "3s": 0.4581,
+        "avg": 0.2777
+      },
+      "uniad": {
+        "1s": 0.1707,
+        "2s": 0.4554,
+        "3s": 1.0512,
+        "avg": 0.5591
+      }
+    },
+    "subgroups": {
+      "location=boston-seaport": {
+        "n": 286,
+        "ade_m": 0.3439
+      },
+      "location=singapore-hollandvillage": {
+        "n": 51,
+        "ade_m": 0.5994
+      },
+      "location=singapore-onenorth": {
+        "n": 105,
+        "ade_m": 0.6336
+      },
+      "location=singapore-queenstown": {
+        "n": 58,
+        "ade_m": 0.5796
+      },
+      "history_edge_padded=True": {
+        "n": 95,
+        "ade_m": 0.4406
+      },
+      "history_edge_padded=False": {
+        "n": 405,
+        "ade_m": 0.4623
+      }
+    },
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1002,
+        "std": 0.4505,
+        "p01": -1.1252,
+        "p99": 1.1384,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.000953,
+        "std": 0.015044,
+        "p01": -0.071473,
+        "p99": 0.044023,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1309,
+      "residual": {
+        "mean_abs_m": 0.0614,
+        "final_step_mean_abs_m": 0.0963,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    },
+    "text": {
+      "n": 500,
+      "cosine_model": 0.9671,
+      "cosine_pca_ceiling": 1.0,
+      "cosine_mean_baseline": 0.9594,
+      "scaled_score": 0.1913,
+      "retrieval": {
+        "bank_size": 21,
+        "retrieval_accuracy": 0.508,
+        "retrieval_accuracy_covered": 0.508,
+        "bank_coverage": 1.0,
+        "behavior_accuracy": 0.508,
+        "behavior_speed_accuracy": 0.626,
+        "behavior_steer_accuracy": 0.776
+      },
+      "behavior_majority_baseline": {
+        "majority_behavior": "The ego vehicle is going straight. The ego vehicle is not moving.",
+        "behavior_accuracy": 0.264,
+        "behavior_speed_accuracy": 0.264,
+        "behavior_steer_accuracy": 0.814
+      }
+    },
+    "step_sweep": [
+      {
+        "steps": 1,
+        "ade_m": 0.4581,
+        "ms_per_sample": 0.0106,
+        "cosine_model": 0.9709
+      },
+      {
+        "steps": 2,
+        "ade_m": 0.4581,
+        "ms_per_sample": 0.0091,
+        "cosine_model": 0.9686
+      },
+      {
+        "steps": 4,
+        "ade_m": 0.4581,
+        "ms_per_sample": 0.017,
+        "cosine_model": 0.9671
+      },
+      {
+        "steps": 8,
+        "ade_m": 0.4581,
+        "ms_per_sample": 0.0216,
+        "cosine_model": 0.9662
+      }
+    ]
+  }
+}

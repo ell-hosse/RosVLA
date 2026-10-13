@@ -1,0 +1,5 @@
+numpy>=1.24
+torch>=2.1
+torchvision>=0.16
+Pillow>=9.0
+sentence-transformers>=2.2   # all-MiniLM-L6-v2, used once to embed the DriveLM captions

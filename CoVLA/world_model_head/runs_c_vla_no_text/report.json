@@ -1,0 +1,398 @@
+{
+  "ablation": "c_vla_no_text",
+  "what_it_sees": {
+    "image": true,
+    "past_3s_state_window": true,
+    "caption_embedding": "none at all"
+  },
+  "trajectory_is_produced_by": "a differentiable kinematic rollout of predicted (a, kappa) controls plus a gated learned residual",
+  "model_size": {
+    "total_params": 341197,
+    "by_module": {
+      "vehicle_encoder": 17408,
+      "img_proj": 73856,
+      "action_head": 190758,
+      "residual_head": 59175
+    },
+    "size_fp32_mb": 1.365,
+    "size_fp16_mb": 0.682,
+    "rollout_params": 0,
+    "rollout_note": "the kinematic rollout in dynamics.py has no parameters at all"
+  },
+  "dynamics_self_test": {
+    "n": 512,
+    "max_position_roundtrip_error_m": 1.4210854715202004e-14,
+    "max_action_roundtrip_error": 5.968558980384842e-13,
+    "all_rows_valid": true,
+    "passed": true
+  },
+  "identified_steering_map": {
+    "fitted": true,
+    "equation": "kappa = deg2rad(steeringAngleDeg) / (L_eff * (1 + K_us * vEgo^2))",
+    "inv_L_eff": 0.077262,
+    "L_eff_m": 12.943,
+    "K_us": 0.00275,
+    "n_fit": 26524,
+    "fit_v_min_mps": 3.0,
+    "residual_mse": 0.0010819,
+    "r2": 0.3002
+  },
+  "prior": "ca",
+  "dt_s": 0.15,
+  "n_steps": 19,
+  "n_waypoints": 20,
+  "horizon_s": 2.85,
+  "best_epoch": 7,
+  "history_log": [
+    {
+      "epoch": 0,
+      "val_ade": 0.8001529574394226,
+      "val_fde": 2.053666591644287,
+      "pretrain": false,
+      "traj_loss": 0.3633852103991168
+    },
+    {
+      "epoch": 1,
+      "val_ade": 0.6248341202735901,
+      "val_fde": 1.598642110824585,
+      "pretrain": false,
+      "traj_loss": 0.2748336003827197
+    },
+    {
+      "epoch": 2,
+      "val_ade": 0.6131945848464966,
+      "val_fde": 1.561092495918274,
+      "pretrain": false,
+      "traj_loss": 0.24806982736502375
+    },
+    {
+      "epoch": 3,
+      "val_ade": 0.6127825975418091,
+      "val_fde": 1.5624263286590576,
+      "pretrain": false,
+      "traj_loss": 0.24233685162450586
+    },
+    {
+      "epoch": 4,
+      "val_ade": 0.613411545753479,
+      "val_fde": 1.5629175901412964,
+      "pretrain": false,
+      "traj_loss": 0.23756075884614672
+    },
+    {
+      "epoch": 5,
+      "val_ade": 0.6089304685592651,
+      "val_fde": 1.5475596189498901,
+      "pretrain": false,
+      "traj_loss": 0.23495418514524188
+    },
+    {
+      "epoch": 6,
+      "val_ade": 0.6135283708572388,
+      "val_fde": 1.5603089332580566,
+      "pretrain": false,
+      "traj_loss": 0.23211578854492732
+    },
+    {
+      "epoch": 7,
+      "val_ade": 0.6007516980171204,
+      "val_fde": 1.5262813568115234,
+      "pretrain": false,
+      "traj_loss": 0.22905452251434327
+    },
+    {
+      "epoch": 8,
+      "val_ade": 0.6026806235313416,
+      "val_fde": 1.534171462059021,
+      "pretrain": false,
+      "traj_loss": 0.22609575795275824
+    },
+    {
+      "epoch": 9,
+      "val_ade": 0.6090003848075867,
+      "val_fde": 1.5530054569244385,
+      "pretrain": false,
+      "traj_loss": 0.22371176976178372
+    },
+    {
+      "epoch": 10,
+      "val_ade": 0.6032277941703796,
+      "val_fde": 1.5345838069915771,
+      "pretrain": false,
+      "traj_loss": 0.2211555127586637
+    },
+    {
+      "epoch": 11,
+      "val_ade": 0.6075140833854675,
+      "val_fde": 1.5446405410766602,
+      "pretrain": false,
+      "traj_loss": 0.21797225257115704
+    },
+    {
+      "epoch": 12,
+      "val_ade": 0.6078747510910034,
+      "val_fde": 1.5448094606399536,
+      "pretrain": false,
+      "traj_loss": 0.21532305447118624
+    }
+  ],
+  "approximate_history": false,
+  "n_rows": {
+    "train": 35784,
+    "val": 3567,
+    "test": 3587
+  },
+  "baselines": {
+    "train": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0676,
+        "fde_m": 2.7544
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.9674,
+        "fde_m": 2.4672
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.1949,
+        "fde_m": 3.2803
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.1289,
+        "fde_m": 3.1278
+      }
+    },
+    "val": {
+      "cv": {
+        "params": 0,
+        "ade_m": 0.996,
+        "fde_m": 2.6094
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.8692,
+        "fde_m": 2.2366
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.1089,
+        "fde_m": 3.0893
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.0115,
+        "fde_m": 2.8351
+      }
+    },
+    "test": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.3019,
+        "fde_m": 3.0658
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 1.1966,
+        "fde_m": 2.7576
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.4082,
+        "fde_m": 3.5207
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.338,
+        "fde_m": 3.3495
+      }
+    }
+  },
+  "oracle_actions": {
+    "train": {
+      "exact": {
+        "ade_m": 0.126759
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.3242,
+        "fde_m": 0.768,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    },
+    "val": {
+      "exact": {
+        "ade_m": 0.052468
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.2428,
+        "fde_m": 0.585,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    },
+    "test": {
+      "exact": {
+        "ade_m": 0.341715
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.5546,
+        "fde_m": 1.0607,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    }
+  },
+  "train": {
+    "n": 35784,
+    "ade_m": 0.6421,
+    "fde_m": 1.6056,
+    "ade_median_m": 0.3797,
+    "fde_p90_m": 2.7916,
+    "per_step_displacement_m": [
+      0.0,
+      0.0489,
+      0.1245,
+      0.1625,
+      0.214,
+      0.2926,
+      0.3363,
+      0.3846,
+      0.4457,
+      0.5102,
+      0.5731,
+      0.6493,
+      0.7352,
+      0.8328,
+      0.9319,
+      1.0615,
+      1.1885,
+      1.3052,
+      1.4399,
+      1.6056
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.0485,
+        "std": 0.4859,
+        "p01": -1.5772,
+        "p99": 1.2772,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -4.6e-05,
+        "std": 0.019182,
+        "p01": -0.078152,
+        "p99": 0.073957,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1838,
+      "residual": {
+        "mean_abs_m": 0.106,
+        "final_step_mean_abs_m": 0.2219,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  },
+  "val": {
+    "n": 3567,
+    "ade_m": 0.6008,
+    "fde_m": 1.5263,
+    "ade_median_m": 0.3954,
+    "fde_p90_m": 3.0075,
+    "per_step_displacement_m": [
+      0.0,
+      0.046,
+      0.0848,
+      0.1218,
+      0.2209,
+      0.2615,
+      0.3065,
+      0.3563,
+      0.4122,
+      0.4722,
+      0.5394,
+      0.6131,
+      0.6959,
+      0.7839,
+      0.8812,
+      0.9835,
+      1.101,
+      1.2222,
+      1.3865,
+      1.5263
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.0501,
+        "std": 0.4992,
+        "p01": -1.723,
+        "p99": 1.2281,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.000149,
+        "std": 0.019301,
+        "p01": -0.074276,
+        "p99": 0.074204,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1883,
+      "residual": {
+        "mean_abs_m": 0.1061,
+        "final_step_mean_abs_m": 0.2226,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  },
+  "test": {
+    "n": 3587,
+    "ade_m": 0.912,
+    "fde_m": 2.0088,
+    "ade_median_m": 0.4193,
+    "fde_p90_m": 3.1234,
+    "per_step_displacement_m": [
+      0.0,
+      0.1323,
+      0.1966,
+      0.2327,
+      0.2731,
+      0.5728,
+      0.6284,
+      0.6835,
+      0.7427,
+      0.8121,
+      0.8856,
+      0.9691,
+      1.087,
+      1.1867,
+      1.2909,
+      1.4074,
+      1.5574,
+      1.7171,
+      1.8567,
+      2.0088
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.0448,
+        "std": 0.511,
+        "p01": -1.6353,
+        "p99": 1.3466,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.000519,
+        "std": 0.019823,
+        "p01": -0.088721,
+        "p99": 0.068491,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.1886,
+      "residual": {
+        "mean_abs_m": 0.1095,
+        "final_step_mean_abs_m": 0.2279,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  }
+}

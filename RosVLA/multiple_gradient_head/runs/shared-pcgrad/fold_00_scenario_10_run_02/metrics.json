@@ -1,0 +1,109 @@
+{
+  "fold": 0,
+  "held_out": "scenario_10_run_02",
+  "mode": {
+    "trunk": "shared",
+    "grad_mode": "pcgrad",
+    "p_sampled_z": 0.5,
+    "stage_a_frac": null
+  },
+  "stage2_model": "fold_00_scenario_10_run_02.json",
+  "n_train": 187,
+  "n_test": 24,
+  "latent_dim": 3,
+  "pca_explained": 1.0,
+  "train_loss": {
+    "flow": 0.02281,
+    "v": 2e-05,
+    "w": 3e-05,
+    "act": 5e-05
+  },
+  "epochs_stage_a": null,
+  "epochs_stage_b": null,
+  "grad_cosine_first_epoch": {
+    "grad_cosine_mean": -0.0023,
+    "frac_conflicting_batches": 1.0,
+    "n_measured": 1
+  },
+  "grad_cosine_last_epoch": {
+    "grad_cosine_mean": -0.1984,
+    "frac_conflicting_batches": 1.0,
+    "n_measured": 1
+  },
+  "grad_cosine_mean_over_training": 0.0304,
+  "frac_conflicting_over_training": 0.4467,
+  "pcgrad_projection_rate": 0.4206,
+  "velocity": {
+    "v": {
+      "mae": 0.2309,
+      "rmse": 0.3215,
+      "max_abs": 0.7854,
+      "r2": -0.7091,
+      "mae_per_step": [
+        0.1681,
+        0.1961,
+        0.2466,
+        0.2793,
+        0.2673,
+        0.2278
+      ]
+    },
+    "w": {
+      "mae": 0.2913,
+      "rmse": 0.3965,
+      "max_abs": 0.9083,
+      "r2": -0.0836,
+      "mae_per_step": [
+        0.2318,
+        0.2659,
+        0.2812,
+        0.2978,
+        0.3491,
+        0.3219
+      ]
+    },
+    "snapped_exact_match": 0.1458,
+    "snapped_exact_match_step0": 0.2917,
+    "snapped_v_mae": 0.2346,
+    "snapped_w_mae": 0.3163
+  },
+  "ade": 0.2775,
+  "fde": 0.5342,
+  "ade_oracle_commands": 0.0396,
+  "fde_oracle_commands": 0.0509,
+  "ade_hold_last_command": 0.2044,
+  "fde_hold_last_command": 0.4317,
+  "min_ade_k5": 0.2757,
+  "min_fde_k5": 0.531,
+  "action": {
+    "accuracy": 0.6667,
+    "per_class_recall": {
+      "FORWARD": {
+        "support": 5,
+        "recall": 1.0
+      },
+      "RIGHT_TURN": {
+        "support": 11,
+        "recall": 0.9091
+      },
+      "STOP": {
+        "support": 1,
+        "recall": 1.0
+      },
+      "REVERSE_LEFT": {
+        "support": 7,
+        "recall": 0.0
+      }
+    }
+  },
+  "accuracy": 0.6667,
+  "text_cosine_model": 0.8544,
+  "text_cosine_pca_ceiling": 0.884,
+  "text_cosine_mean_baseline": 0.8119,
+  "text_retrieval_accuracy": 0.625,
+  "text_retrieval_accuracy_covered": 0.8824,
+  "text_bank_coverage": 0.7083,
+  "text_bank_size": 4,
+  "text_n_unique_true": 4,
+  "train_seconds": 66.5
+}

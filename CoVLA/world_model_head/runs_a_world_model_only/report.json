@@ -1,0 +1,656 @@
+{
+  "ablation": "a_world_model_only",
+  "what_it_sees": {
+    "image": false,
+    "past_3s_state_window": true,
+    "caption_embedding": "none at all"
+  },
+  "trajectory_is_produced_by": "a differentiable kinematic rollout of predicted (a, kappa) controls plus a gated learned residual",
+  "model_size": {
+    "total_params": 201805,
+    "by_module": {
+      "vehicle_encoder": 17408,
+      "action_head": 157990,
+      "residual_head": 26407
+    },
+    "size_fp32_mb": 0.807,
+    "size_fp16_mb": 0.404,
+    "rollout_params": 0,
+    "rollout_note": "the kinematic rollout in dynamics.py has no parameters at all"
+  },
+  "dynamics_self_test": {
+    "n": 512,
+    "max_position_roundtrip_error_m": 1.4210854715202004e-14,
+    "max_action_roundtrip_error": 5.968558980384842e-13,
+    "all_rows_valid": true,
+    "passed": true
+  },
+  "identified_steering_map": {
+    "fitted": true,
+    "equation": "kappa = deg2rad(steeringAngleDeg) / (L_eff * (1 + K_us * vEgo^2))",
+    "inv_L_eff": 0.077262,
+    "L_eff_m": 12.943,
+    "K_us": 0.00275,
+    "n_fit": 26524,
+    "fit_v_min_mps": 3.0,
+    "residual_mse": 0.0010819,
+    "r2": 0.3002
+  },
+  "prior": "ca",
+  "dt_s": 0.15,
+  "n_steps": 19,
+  "n_waypoints": 20,
+  "horizon_s": 2.85,
+  "best_epoch": 44,
+  "history_log": [
+    {
+      "epoch": 0,
+      "val_ade": 0.6776677966117859,
+      "val_fde": 1.7630372047424316,
+      "pretrain": false,
+      "traj_loss": 0.35145672389439175
+    },
+    {
+      "epoch": 1,
+      "val_ade": 0.6337530016899109,
+      "val_fde": 1.6277140378952026,
+      "pretrain": false,
+      "traj_loss": 0.26518946417740413
+    },
+    {
+      "epoch": 2,
+      "val_ade": 0.6264076232910156,
+      "val_fde": 1.6053828001022339,
+      "pretrain": false,
+      "traj_loss": 0.2564876251987049
+    },
+    {
+      "epoch": 3,
+      "val_ade": 0.6216136813163757,
+      "val_fde": 1.5887987613677979,
+      "pretrain": false,
+      "traj_loss": 0.2535546048411301
+    },
+    {
+      "epoch": 4,
+      "val_ade": 0.6154810190200806,
+      "val_fde": 1.5742151737213135,
+      "pretrain": false,
+      "traj_loss": 0.25005524839673726
+    },
+    {
+      "epoch": 5,
+      "val_ade": 0.6108514666557312,
+      "val_fde": 1.5623821020126343,
+      "pretrain": false,
+      "traj_loss": 0.24943989015051296
+    },
+    {
+      "epoch": 6,
+      "val_ade": 0.6121873259544373,
+      "val_fde": 1.5688258409500122,
+      "pretrain": false,
+      "traj_loss": 0.24738073710884367
+    },
+    {
+      "epoch": 7,
+      "val_ade": 0.614443838596344,
+      "val_fde": 1.5763767957687378,
+      "pretrain": false,
+      "traj_loss": 0.24548581668308803
+    },
+    {
+      "epoch": 8,
+      "val_ade": 0.6120936870574951,
+      "val_fde": 1.5673478841781616,
+      "pretrain": false,
+      "traj_loss": 0.24532721574817384
+    },
+    {
+      "epoch": 9,
+      "val_ade": 0.6478192806243896,
+      "val_fde": 1.66966712474823,
+      "pretrain": false,
+      "traj_loss": 0.2449877118957894
+    },
+    {
+      "epoch": 10,
+      "val_ade": 0.5984643697738647,
+      "val_fde": 1.5338860750198364,
+      "pretrain": false,
+      "traj_loss": 0.24411200881004333
+    },
+    {
+      "epoch": 11,
+      "val_ade": 0.596220850944519,
+      "val_fde": 1.5276342630386353,
+      "pretrain": false,
+      "traj_loss": 0.24097631578998907
+    },
+    {
+      "epoch": 12,
+      "val_ade": 0.6028637886047363,
+      "val_fde": 1.5494319200515747,
+      "pretrain": false,
+      "traj_loss": 0.24009839040892464
+    },
+    {
+      "epoch": 13,
+      "val_ade": 0.6089445352554321,
+      "val_fde": 1.5653352737426758,
+      "pretrain": false,
+      "traj_loss": 0.23881182718489852
+    },
+    {
+      "epoch": 14,
+      "val_ade": 0.5888221263885498,
+      "val_fde": 1.5107126235961914,
+      "pretrain": false,
+      "traj_loss": 0.23772288864212376
+    },
+    {
+      "epoch": 15,
+      "val_ade": 0.5802745819091797,
+      "val_fde": 1.4865449666976929,
+      "pretrain": false,
+      "traj_loss": 0.23569261729717256
+    },
+    {
+      "epoch": 16,
+      "val_ade": 0.6060937643051147,
+      "val_fde": 1.5589334964752197,
+      "pretrain": false,
+      "traj_loss": 0.23503803919468608
+    },
+    {
+      "epoch": 17,
+      "val_ade": 0.5790741443634033,
+      "val_fde": 1.4842673540115356,
+      "pretrain": false,
+      "traj_loss": 0.23419557309576444
+    },
+    {
+      "epoch": 18,
+      "val_ade": 0.5771851539611816,
+      "val_fde": 1.479137659072876,
+      "pretrain": false,
+      "traj_loss": 0.2341621802321502
+    },
+    {
+      "epoch": 19,
+      "val_ade": 0.5755764842033386,
+      "val_fde": 1.4762719869613647,
+      "pretrain": false,
+      "traj_loss": 0.23359195845467703
+    },
+    {
+      "epoch": 20,
+      "val_ade": 0.5730383396148682,
+      "val_fde": 1.4690240621566772,
+      "pretrain": false,
+      "traj_loss": 0.23329924196004867
+    },
+    {
+      "epoch": 21,
+      "val_ade": 0.5750495791435242,
+      "val_fde": 1.475075364112854,
+      "pretrain": false,
+      "traj_loss": 0.23237359619566372
+    },
+    {
+      "epoch": 22,
+      "val_ade": 0.588397204875946,
+      "val_fde": 1.5141775608062744,
+      "pretrain": false,
+      "traj_loss": 0.23103696741163732
+    },
+    {
+      "epoch": 23,
+      "val_ade": 0.5763301253318787,
+      "val_fde": 1.4777147769927979,
+      "pretrain": false,
+      "traj_loss": 0.23091428274554865
+    },
+    {
+      "epoch": 24,
+      "val_ade": 0.5706762671470642,
+      "val_fde": 1.464444637298584,
+      "pretrain": false,
+      "traj_loss": 0.23075086080602236
+    },
+    {
+      "epoch": 25,
+      "val_ade": 0.5748741626739502,
+      "val_fde": 1.4777710437774658,
+      "pretrain": false,
+      "traj_loss": 0.23023418565945966
+    },
+    {
+      "epoch": 26,
+      "val_ade": 0.5708129405975342,
+      "val_fde": 1.4655810594558716,
+      "pretrain": false,
+      "traj_loss": 0.22996019258030823
+    },
+    {
+      "epoch": 27,
+      "val_ade": 0.5735552310943604,
+      "val_fde": 1.473525881767273,
+      "pretrain": false,
+      "traj_loss": 0.22950119514550482
+    },
+    {
+      "epoch": 28,
+      "val_ade": 0.5693342089653015,
+      "val_fde": 1.4612438678741455,
+      "pretrain": false,
+      "traj_loss": 0.22929318345018795
+    },
+    {
+      "epoch": 29,
+      "val_ade": 0.570953369140625,
+      "val_fde": 1.4673969745635986,
+      "pretrain": false,
+      "traj_loss": 0.22863657756575517
+    },
+    {
+      "epoch": 30,
+      "val_ade": 0.568272590637207,
+      "val_fde": 1.4600183963775635,
+      "pretrain": false,
+      "traj_loss": 0.2287157975669418
+    },
+    {
+      "epoch": 31,
+      "val_ade": 0.5657243132591248,
+      "val_fde": 1.4514338970184326,
+      "pretrain": false,
+      "traj_loss": 0.2282819276941674
+    },
+    {
+      "epoch": 32,
+      "val_ade": 0.567919909954071,
+      "val_fde": 1.459140419960022,
+      "pretrain": false,
+      "traj_loss": 0.22836915887892245
+    },
+    {
+      "epoch": 33,
+      "val_ade": 0.5702049732208252,
+      "val_fde": 1.4652130603790283,
+      "pretrain": false,
+      "traj_loss": 0.22838027040873254
+    },
+    {
+      "epoch": 34,
+      "val_ade": 0.5665522813796997,
+      "val_fde": 1.4544429779052734,
+      "pretrain": false,
+      "traj_loss": 0.22891614570149355
+    },
+    {
+      "epoch": 35,
+      "val_ade": 0.5638943910598755,
+      "val_fde": 1.4473718404769897,
+      "pretrain": false,
+      "traj_loss": 0.2277832212724856
+    },
+    {
+      "epoch": 36,
+      "val_ade": 0.56418776512146,
+      "val_fde": 1.4482051134109497,
+      "pretrain": false,
+      "traj_loss": 0.2276708627917937
+    },
+    {
+      "epoch": 37,
+      "val_ade": 0.5631585121154785,
+      "val_fde": 1.445984125137329,
+      "pretrain": false,
+      "traj_loss": 0.2277304839875017
+    },
+    {
+      "epoch": 38,
+      "val_ade": 0.5624547600746155,
+      "val_fde": 1.4436750411987305,
+      "pretrain": false,
+      "traj_loss": 0.2273011756262609
+    },
+    {
+      "epoch": 39,
+      "val_ade": 0.5641319751739502,
+      "val_fde": 1.4471864700317383,
+      "pretrain": false,
+      "traj_loss": 0.22741544278604645
+    },
+    {
+      "epoch": 40,
+      "val_ade": 0.5663434267044067,
+      "val_fde": 1.454395055770874,
+      "pretrain": false,
+      "traj_loss": 0.22705214002302715
+    },
+    {
+      "epoch": 41,
+      "val_ade": 0.5627166032791138,
+      "val_fde": 1.4441006183624268,
+      "pretrain": false,
+      "traj_loss": 0.22698114046028683
+    },
+    {
+      "epoch": 42,
+      "val_ade": 0.5622707605361938,
+      "val_fde": 1.4429874420166016,
+      "pretrain": false,
+      "traj_loss": 0.22679501229098864
+    },
+    {
+      "epoch": 43,
+      "val_ade": 0.5622869729995728,
+      "val_fde": 1.4434056282043457,
+      "pretrain": false,
+      "traj_loss": 0.2268741828522512
+    },
+    {
+      "epoch": 44,
+      "val_ade": 0.5619741678237915,
+      "val_fde": 1.442246437072754,
+      "pretrain": false,
+      "traj_loss": 0.22672005934374673
+    },
+    {
+      "epoch": 45,
+      "val_ade": 0.5623468160629272,
+      "val_fde": 1.4432299137115479,
+      "pretrain": false,
+      "traj_loss": 0.22665739650172848
+    },
+    {
+      "epoch": 46,
+      "val_ade": 0.5619403719902039,
+      "val_fde": 1.4421199560165405,
+      "pretrain": false,
+      "traj_loss": 0.2267034544476441
+    },
+    {
+      "epoch": 47,
+      "val_ade": 0.5622208714485168,
+      "val_fde": 1.4429492950439453,
+      "pretrain": false,
+      "traj_loss": 0.22714118904301098
+    },
+    {
+      "epoch": 48,
+      "val_ade": 0.5621170401573181,
+      "val_fde": 1.4426746368408203,
+      "pretrain": false,
+      "traj_loss": 0.22659822079752173
+    },
+    {
+      "epoch": 49,
+      "val_ade": 0.5620520114898682,
+      "val_fde": 1.4424715042114258,
+      "pretrain": false,
+      "traj_loss": 0.22716428408665315
+    }
+  ],
+  "approximate_history": false,
+  "n_rows": {
+    "train": 35784,
+    "val": 3567,
+    "test": 3587
+  },
+  "baselines": {
+    "train": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.0676,
+        "fde_m": 2.7544
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.9674,
+        "fde_m": 2.4672
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.1949,
+        "fde_m": 3.2803
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.1289,
+        "fde_m": 3.1278
+      }
+    },
+    "val": {
+      "cv": {
+        "params": 0,
+        "ade_m": 0.996,
+        "fde_m": 2.6094
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 0.8692,
+        "fde_m": 2.2366
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.1089,
+        "fde_m": 3.0893
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.0115,
+        "fde_m": 2.8351
+      }
+    },
+    "test": {
+      "cv": {
+        "params": 0,
+        "ade_m": 1.3019,
+        "fde_m": 3.0658
+      },
+      "ca": {
+        "params": 0,
+        "ade_m": 1.1966,
+        "fde_m": 2.7576
+      },
+      "ctrv": {
+        "params": 0,
+        "ade_m": 1.4082,
+        "fde_m": 3.5207
+      },
+      "ctra": {
+        "params": 0,
+        "ade_m": 1.338,
+        "fde_m": 3.3495
+      }
+    }
+  },
+  "oracle_actions": {
+    "train": {
+      "exact": {
+        "ade_m": 0.126759
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.3242,
+        "fde_m": 0.768,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    },
+    "val": {
+      "exact": {
+        "ade_m": 0.052468
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.2428,
+        "fde_m": 0.585,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    },
+    "test": {
+      "exact": {
+        "ade_m": 0.341715
+      },
+      "clipped_to_envelope": {
+        "ade_m": 0.5546,
+        "fde_m": 1.0607,
+        "note": "best reachable ADE for ANY model bounded by |a|<=8.0 m/s^2, |kappa|<=0.2 1/m"
+      }
+    }
+  },
+  "train": {
+    "n": 35784,
+    "ade_m": 0.6404,
+    "fde_m": 1.6149,
+    "ade_median_m": 0.3787,
+    "fde_p90_m": 2.8026,
+    "per_step_displacement_m": [
+      0.0,
+      0.049,
+      0.1254,
+      0.1636,
+      0.2148,
+      0.2922,
+      0.3348,
+      0.3814,
+      0.4413,
+      0.5041,
+      0.5664,
+      0.6418,
+      0.728,
+      0.826,
+      0.9265,
+      1.058,
+      1.1873,
+      1.3069,
+      1.4457,
+      1.6149
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1002,
+        "std": 0.6259,
+        "p01": -1.9941,
+        "p99": 1.6753,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.000611,
+        "std": 0.021302,
+        "p01": -0.09242,
+        "p99": 0.075673,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.6549,
+      "residual": {
+        "mean_abs_m": 0.0974,
+        "final_step_mean_abs_m": 0.1253,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  },
+  "val": {
+    "n": 3567,
+    "ade_m": 0.562,
+    "fde_m": 1.4422,
+    "ade_median_m": 0.3634,
+    "fde_p90_m": 2.8422,
+    "per_step_displacement_m": [
+      0.0,
+      0.0454,
+      0.0842,
+      0.1197,
+      0.2165,
+      0.2527,
+      0.2923,
+      0.3353,
+      0.3842,
+      0.4367,
+      0.4979,
+      0.5644,
+      0.6409,
+      0.723,
+      0.8152,
+      0.913,
+      1.0263,
+      1.1439,
+      1.3054,
+      1.4422
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.1115,
+        "std": 0.6433,
+        "p01": -2.1436,
+        "p99": 1.6319,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.000885,
+        "std": 0.021565,
+        "p01": -0.086013,
+        "p99": 0.075576,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.6629,
+      "residual": {
+        "mean_abs_m": 0.0998,
+        "final_step_mean_abs_m": 0.1279,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  },
+  "test": {
+    "n": 3587,
+    "ade_m": 0.8711,
+    "fde_m": 1.9167,
+    "ade_median_m": 0.375,
+    "fde_p90_m": 2.9437,
+    "per_step_displacement_m": [
+      0.0,
+      0.1314,
+      0.1952,
+      0.2294,
+      0.2674,
+      0.5628,
+      0.6135,
+      0.6618,
+      0.7147,
+      0.7767,
+      0.8434,
+      0.9197,
+      1.0309,
+      1.1239,
+      1.2223,
+      1.333,
+      1.4779,
+      1.6326,
+      1.7689,
+      1.9167
+    ],
+    "actions": {
+      "accel_mps2": {
+        "mean": -0.0957,
+        "std": 0.6441,
+        "p01": -1.9665,
+        "p99": 1.7171,
+        "saturated_frac": 0.0
+      },
+      "curvature_1pm": {
+        "mean": -0.001005,
+        "std": 0.02156,
+        "p01": -0.099742,
+        "p99": 0.070677,
+        "saturated_frac": 0.0
+      },
+      "mean_abs_jerk_mps3": 0.6593,
+      "residual": {
+        "mean_abs_m": 0.0984,
+        "final_step_mean_abs_m": 0.1259,
+        "note": "displacement added AFTER the kinematic rollout; if this approaches the ADE, the physics is no longer doing the work"
+      }
+    }
+  }
+}

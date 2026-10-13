@@ -1,0 +1,58 @@
+{
+  "modes": [
+    "published (ablation b)",
+    "shared-joint",
+    "split-staged"
+  ],
+  "table": {
+    "test.ade_m": {
+      "published (ablation b)": 0.9073,
+      "shared-joint": 0.9055,
+      "split-staged": 0.9104
+    },
+    "test.fde_m": {
+      "published (ablation b)": 1.9942,
+      "shared-joint": 1.9921,
+      "split-staged": 1.9976
+    },
+    "test.min_ade_k5": {
+      "published (ablation b)": 0.8589,
+      "shared-joint": 0.8636,
+      "split-staged": 0.8728
+    },
+    "val.ade_m": {
+      "published (ablation b)": 0.5956,
+      "shared-joint": 0.5936,
+      "split-staged": 0.6014
+    },
+    "test.actions.residual.mean_abs_m": {
+      "published (ablation b)": 0.2361,
+      "shared-joint": 0.2324,
+      "split-staged": 0.1537
+    },
+    "test.text.cosine_model": {
+      "published (ablation b)": 0.9512,
+      "shared-joint": 0.9499,
+      "split-staged": 0.9517
+    },
+    "test.text.scaled_score": {
+      "published (ablation b)": 0.1947,
+      "shared-joint": 0.1719,
+      "split-staged": 0.2048
+    },
+    "model_size.total_params": {
+      "published (ablation b)": 1545965,
+      "shared-joint": 1545965,
+      "split-staged": 1637229
+    },
+    "best_epoch": {
+      "published (ablation b)": 17,
+      "shared-joint": 11,
+      "split-staged": 32
+    },
+    "grad_cosine_mean_over_training": {
+      "shared-joint": -0.0013
+    }
+  },
+  "baseline_test_ade": 0.9073
+}
